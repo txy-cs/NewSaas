@@ -1,0 +1,4342 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Universal_ClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:Universal_ClassLibrary.ArrayList.ArrayListGoEcho">
+            <summary>
+            ArrayList去重复类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.ArrayList.ArrayListGoEcho.ArrayListDistinct(System.Collections.ArrayList)">
+            <summary>
+            ArrayList去重复方法
+            </summary>
+            <param name="TmpArrayList">ArrayList对象</param>
+            <returns>返回去重复后的ArrayList对象</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.ArrayList.ArrayListHanDle">
+            <summary>
+            ArrayList综合操作
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.ArrayList.ArrayListHanDle.Filtrate(System.Collections.ArrayList,System.String,Universal_ClassLibrary.KeepRemove)">
+            <summary>
+            ArrayList过滤
+            </summary>
+            <param name="TmpArrayList">ArrayList对象</param>
+            <param name="TmpFilter">条件:条件1|条件2|条件3</param>
+            <param name="TmpKeepRemove">保留或移除</param>
+            <returns>返回过滤后的ArrayList对象</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.ArrayList.ArrayListSort">
+            <summary>
+            ArrayList排序类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.ArrayList.ArrayListSort.ArrayListSorting(System.Collections.ArrayList,Universal_ClassLibrary.LiftingType)">
+            <summary>
+            ArrayList排序方法
+            </summary>
+            <param name="TmpArrayList">ArrayList对象</param>
+            <param name="TmpLiftingType">升降序</param>
+            <returns>返回排序后的ArrayList对象</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.Array.ArrayGoEcho">
+            <summary>
+            Array去重复
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Array.ArrayGoEcho.ArrayDistinct(System.Array)">
+            <summary>
+            Array数组去重复方法
+            </summary>
+            <param name="TmpArray">Array对象</param>
+            <returns>返回去重复后的Array对象</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.Array.ArraySort">
+            <summary>
+            数组排序
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Array.ArraySort.ArraySorting(System.Array,Universal_ClassLibrary.LiftingType)">
+            <summary>
+            Array排序方法
+            </summary>
+            <param name="TmpArray">Array对象</param>
+            <param name="TmpLiftingType">升降序</param>
+            <returns>返回排序完成的Array对象</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataTable.DataTableToExcel">
+            <summary>
+            DataTable转Excel文件
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTableToExcel.DataTabletoExcel(System.Data.DataTable,System.String)">
+            <summary>
+            DataTable To Excel 逐行写入方式   
+            </summary>
+            <param name="tmpDataTable">数据源</param>
+            <param name="strFileName">保存路径</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTableToExcel.DataTableToExcelRange(System.Data.DataTable,System.String)">
+            <summary>
+            DataTable To Excel 范围写入方式   
+            </summary>
+            <param name="TmpDataTable">数据源</param>
+            <param name="Path">保存路径</param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataTable.DataTableToPDF">
+            <summary>
+            DataTable转pdf  
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTableToPDF.DataTableExportToPDF(System.Data.DataTable,System.String,System.String,System.Single)">
+            <summary>
+            DataTable转pdf  
+            例子：ConvertDataTableToPDF(Table, @".\test.pdf", "C:\\WINDOWS\\FONTS\\SIMSUN.TTC,1", 9);　//这里使用宋体，大小9pt。 
+            </summary>
+            <param name="Data">数据源</param>
+            <param name="PDFFile">生成的PDF文件</param>
+            <param name="FontPath">字体路径</param>
+            <param name="FontSize">字体大小</param>
+            <returns>TRUE  FALSE</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.Office.ConvertTo">
+            <summary>
+            Office转换类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.ConvertTo.Convert(System.String,System.String,Universal_ClassLibrary.OfficeType)">
+            <summary>
+            文档转换成PDF格式
+            </summary>
+            <param name="sourcePath">源文件</param>
+            <param name="targetPath">输出文件</param>
+            <param name="officetype">转换格式</param>
+            <returns>true  false</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.ConvertTo.WordToPDF(System.String,System.String,Microsoft.Office.Interop.Word.WdExportFormat)">
+            <summary>
+            将word文档转换成PDF格式
+            </summary>
+            <param name="sourcePath">源文件</param>
+            <param name="targetPath">输出文件</param>
+            <param name="exportFormat">转换格式</param>
+            <returns>true  false</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.ConvertTo.ExcelToPDF(System.String,System.String,Microsoft.Office.Interop.Excel.XlFixedFormatType)">
+            <summary>
+            将excel文档转换成PDF格式
+            </summary>
+            <param name="sourcePath">源文件</param>
+            <param name="targetPath">输出文件</param>
+            <param name="targetType">转换格式</param>
+            <returns>true  false</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.ConvertTo.PptToPDF(System.String,System.String,Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType)">
+            <summary>
+            将ppt文档转换成PDF格式
+            </summary>
+            <param name="sourcePath">源文件</param>
+            <param name="targetPath">输出文件</param>
+            <param name="targetFileType">转换格式</param>
+            <returns>true  false</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.Office.Excel.ExcelEdit">
+            <summary>
+            编辑类
+            创建excel工作薄工作表以及写入数据
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.Excel.ExcelEdit.#ctor">
+            <summary>
+            构造函数，不创建Excel工作薄
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.Excel.ExcelEdit.Open(System.String)">
+            <summary>
+            打开文件
+            </summary>
+            <param name="excelFilePath"></param>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.Excel.ExcelEdit.Close">
+            <summary>
+            关闭并且保存
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.Excel.ExcelEdit.Create">
+            <summary>
+            创建Excel工作薄
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.Excel.ExcelEdit.ShowExcel">
+            <summary>
+            显示Excel
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.Excel.ExcelEdit.GetSheet(System.String)">
+            <summary>
+            获取一个工作表
+            </summary>
+            <param name="SheetName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.Excel.ExcelEdit.AddSheet(System.String)">
+            <summary>
+            添加一个工作表
+            </summary>
+            <param name="SheetName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.Excel.ExcelEdit.DelSheet(System.String)">
+            <summary>
+            删除一个工作表
+            </summary>
+            <param name="SheetName"></param>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.Excel.ExcelEdit.ReNameSheet(System.String,System.String)">
+            <summary>
+            重命名一个工作表
+            </summary>
+            <param name="OldSheetName"></param>
+            <param name="NewSheetName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.Excel.ExcelEdit.WriteData(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            将指定字符串写入指定单元格中
+            </summary>
+            <param name="data">要写入的数据</param>       
+            <param name="sheetName">工作表名称</param>
+            <param name="row">第几行</param>  
+            <param name="column">第几列</param>  
+        </member>
+        <member name="T:Universal_ClassLibrary.Office.Excel.ExcelRead">
+            <summary>
+            Excel读取类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Office.Excel.ExcelRead.GetExcelData(System.String)">
+            <summary>
+            Excel转DataTable
+            </summary>
+            <param name="excelFilePath">路径</param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.PDF.ConvertTo">
+            <summary>
+            PDF转换类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.PDF.ConvertTo.PDFToSWF(System.String,System.String)">
+            <summary>
+            转换所有的页，图片质量80%
+            </summary>
+            <param name="pdfPath">PDF文件地址</param>
+            <param name="swfPath">生成后的SWF文件地址</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.PDF.ConvertTo.PDFToSWF(System.String,System.String,System.Int32)">
+            <summary>
+            转换前N页，图片质量80%
+            </summary>
+            <param name="pdfPath">PDF文件地址</param>
+            <param name="swfPath">生成后的SWF文件地址</param>
+            <param name="page">页数</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.PDF.ConvertTo.PDFToSWF(System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            PDF格式转为SWF
+            </summary>
+            <param name="pdfPath">PDF文件地址</param>
+            <param name="swfPath">生成后的SWF文件地址</param>
+            <param name="beginpage">转换开始页</param>
+            <param name="endpage">转换结束页</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.PDF.ConvertTo.GetPageCount(System.String)">
+            <summary>
+            返回页数
+            </summary>
+            <param name="pdfPath">PDF文件地址</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.PDF.ConvertTo.PDFToPic(System.String,System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            PDFToPic
+            </summary>
+            <param name="pdfInputPathDirectory">源文件</param>
+            <param name="pngOutputPath">图片导出目录</param>
+            <param name="format">导出图片格式类型</param>
+            <returns>返回多张图片信息</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.SystemOperation.ApiParameter">
+            <summary>
+            API参数
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.MAX_PATH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.PROCESS_ALL_ACCESS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.MK_LBUTTON">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.MK_RBUTTON">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.MK_SHIFT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.MK_CONTROL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.MK_MBUTTON">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.MK_XBUTTON1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.MK_XBUTTON2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.SE_PRIVILEGE_ENABLED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.TOKEN_QUERY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.TOKEN_ADJUST_PRIVILEGES">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.SE_SHUTDOWN_NAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.EWX_LOGOFF">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.EWX_SHUTDOWN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.EWX_REBOOT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.EWX_FORCE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.EWX_POWEROFF">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.SC_MONITORPOWER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.LOGOFF">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.LOCALE_SLONGDATE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.LOCALE_SSHORTDATE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.LOCALE_STIME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WH_KEYBOARD_LL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.BM_CLICK">
+            <summary>
+            点击
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.VK_RETURN">
+            <summary>
+            回车键
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_KEYDOWN">
+            <summary>
+            WM_KEYDOWN 按下一个键
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_KEYUP">
+            <summary>
+            释放一个键
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_CHAR">
+            <summary>
+            按下某键，并已发出WM_KEYDOWN， WM_KEYUP消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_DEADCHAR">
+            <summary>
+            当用translatemessage函数翻译WM_KEYUP消息时发送此消息给拥有焦点的窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SYSKEYDOWN">
+            <summary>
+            当用户按住ALT键同时按下其它键时提交此消息给拥有焦点的窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SYSKEYUP">
+            <summary>
+            当用户释放一个键同时ALT 键还按着时提交此消息给拥有焦点的窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SYSCHAR">
+            <summary>
+            当WM_SYSKEYDOWN消息被TRANSLATEMESSAGE函数翻译后提交此消息给拥有焦点的窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SYSDEADCHAR">
+            <summary>
+            当WM_SYSKEYDOWN消息被TRANSLATEMESSAGE函数翻译后发送此消息给拥有焦点的窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_INITDIALOG">
+            <summary>
+            在一个对话框程序被显示前发送此消息给它，通常用此消息初始化控件和执行其它任务
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_COMMAND">
+            <summary>
+            当用户选择一条菜单命令项或当某个控件发送一条消息给它的父窗口，一个快捷键被翻译
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SYSCOMMAND">
+            <summary>
+            当用户选择窗口菜单的一条命令或//当用户选择最大化或最小化时那个窗口会收到此消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_TIMER">
+            <summary>
+            发生了定时器事件
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_HSCROLL">
+            <summary>
+            当一个窗口标准水平滚动条产生一个滚动事件时发送此消息给那个窗口，也发送给拥有它的控件
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_VSCROLL">
+            <summary>
+            当一个窗口标准垂直滚动条产生一个滚动事件时发送此消息给那个窗口也，发送给拥有它的控件
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_INITMENU">
+            <summary>
+            当一个菜单将要被激活时发送此消息，它发生在用户菜单条中的某项或按下某个菜单键，它允许程序在显示前更改菜单
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_INITMENUPOPUP">
+            <summary>
+            当一个下拉菜单或子菜单将要被激活时发送此消息，它允许程序在它显示前更改菜单，而不要改变全部
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_MENUSELECT">
+            <summary>
+            当用户选择一条菜单项时发送此消息给菜单的所有者（一般是窗口）
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_MENUCHAR">
+            <summary>
+            当菜单已被激活用户按下了某个键（不同于加速键），发送此消息给菜单的所有者
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_ENTERIDLE">
+            <summary>
+            当一个模态对话框或菜单进入空载状态时发送此消息给它的所有者，一个模态对话框或菜单进入空载状态就是在处理完一条或几条先前的消息后没有消息它的列队中等待
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_CTLCOLORMSGBOX">
+            <summary>
+            在windows绘制消息框前发送此消息给消息框的所有者窗口，通过响应这条消息，所有者窗口可以通过使用给定的相关显示设备的句柄来设置消息框的文本和背景颜色
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_CTLCOLOREDIT">
+            <summary>
+            当一个编辑型控件将要被绘制时发送此消息给它的父窗口通过响应这条消息，所有者窗口可以通过使用给定的相关显示设备的句柄来设置编辑框的文本和背景颜色
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_CTLCOLORLISTBOX">
+            <summary>
+            当一个列表框控件将要被绘制前发送此消息给它的父窗口通过响应这条消息，所有者窗口可以通过使用给定的相关显示设备的句柄来设置列表框的文本和背景颜色
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_CTLCOLORBTN">
+            <summary>
+            当一个按钮控件将要被绘制时发送此消息给它的父窗口通过响应这条消息，所有者窗口可以通过使用给定的相关显示设备的句柄来设置按纽的文本和背景颜色
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_CTLCOLORDLG">
+            <summary>
+            当一个对话框控件将要被绘制前发送此消息给它的父窗口通过响应这条消息，所有者窗口可以通过使用给定的相关显示设备的句柄来设置对话框的文本背景颜色
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_CTLCOLORSCROLLBAR">
+            <summary>
+            当一个滚动条控件将要被绘制时发送此消息给它的父窗口通过响应这条消息，所有者窗口可以通过使用给定的相关显示设备的句柄来设置滚动条的背景颜色
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_CTLCOLORconst">
+            <summary>
+            当一个静态控件将要被绘制时发送此消息给它的父窗口通过响应这条消息，所有者窗口可以 通过使用给定的相关显示设备的句柄来设置静态控件的文本和背景颜色
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_MOUSEWHEEL">
+            <summary>
+            当鼠标轮子转动时发送此消息个当前有焦点的控件
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_MBUTTONDBLCLK">
+            <summary>
+            双击鼠标中键
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_MBUTTONUP">
+            <summary>
+            释放鼠标中键
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_MOUSEMOVE">
+            <summary>
+            移动鼠标时发生，同WM_MOUSEFIRST
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_LBUTTONDOWN">
+            <summary>
+            按下鼠标左键
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_LBUTTONUP">
+            <summary>
+            释放鼠标左键
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_LBUTTONDBLCLK">
+            <summary>
+            双击鼠标左键
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_RBUTTONDOWN">
+            <summary>
+            按下鼠标右键
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_RBUTTONUP">
+            <summary>
+            释放鼠标右键
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_RBUTTONDBLCLK">
+            <summary>
+            双击鼠标右键
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_MBUTTONDOWN">
+            <summary>
+            按下鼠标中键
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_USER">
+            <summary>
+            为了防止用户定义的消息ID与系统的消息ID冲突，MS（Microsoft）定义了一个宏WM_USER，小于WM_USER的ID被系统使用，大于WM_USER的ID被用户使用。
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_CREATE">
+            <summary>
+            创建一个窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_DESTROY">
+            <summary>
+            当一个窗口被破坏时发送
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_MOVE">
+            <summary>
+            移动一个窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SIZE">
+            <summary>
+            改变一个窗口的大小
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_ACTIVATE">
+            <summary>
+            一个窗口被激活或失去激活状态
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SETFOCUS">
+            <summary>
+            一个窗口获得焦点
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_KILLFOCUS">
+            <summary>
+            一个窗口失去焦点
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_ENABLE">
+            <summary>
+            一个窗口改变成Enable状态
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SETREDRAW">
+            <summary>
+            设置窗口是否能重画
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SETTEXT">
+            <summary>
+            应用程序发送此消息来设置一个窗口的文本
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_GETTEXT">
+            <summary>
+            应用程序发送此消息来复制对应窗口的文本到缓冲区
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_GETTEXTLENGTH">
+            <summary>
+            得到与一个窗口有关的文本的长度（不包含空字符）
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_PAuint">
+            <summary>
+            要求一个窗口重画自己
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_CLOSE">
+            <summary>
+            当一个窗口或应用程序要关闭时发送一个信号
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_QUERYENDSESSION">
+            <summary>
+            当用户选择结束对话框或程序自己调用ExitWindows函数
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_QUIT">
+            <summary>
+            用来结束程序运行
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_QUERYOPEN">
+            <summary>
+            当用户窗口恢复以前的大小位置时，把此消息发送给某个图标
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_ERASEBKGND">
+            <summary>
+            当窗口背景必须被擦除时（例在窗口改变大小时）
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SYSCOLORCHANGE">
+            <summary>
+            当系统颜色改变时，发送此消息给所有顶级窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_ENDSESSION">
+            <summary>
+            当系统进程发出WM_QUERYENDSESSION消息后，此消息发送给应用程序，通知它对话是否结束
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SHOWWINDOW">
+            <summary>
+            当隐藏或显示窗口是发送此消息给这个窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_ACTIVATEAPP">
+            <summary>
+            发此消息给应用程序哪个窗口是激活的，哪个是非激活的
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_FONTCHANGE">
+            <summary>
+            当系统的字体资源库变化时发送此消息给所有顶级窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_TIMECHANGE">
+            <summary>
+            当系统的时间变化时发送此消息给所有顶级窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_CANCELMODE">
+            <summary>
+            发送此消息来取消某种正在进行的摸态（操作）
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SETCURSOR">
+            <summary>
+            如果鼠标引起光标在某个窗口中移动且鼠标输入没有被捕获时，就发消息给某个窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_MOUSEACTIVATE">
+            <summary>
+            当光标在某个非激活的窗口中而用户正按着鼠标的某个键发送此消息给//当前窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_CHILDACTIVATE">
+            <summary>
+            发送此消息给MDI子窗口//当用户点击此窗口的标题栏，或//当窗口被激活，移动，改变大小
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_QUEUESYNC">
+            <summary>
+            此消息由基于计算机的训练程序发送，通过WH_JOURNALPALYBACK的hook程序分离出用户输入消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_GETMINMAXINFO">
+            <summary>
+            此消息发送给窗口当它将要改变大小或位置
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_PAuintICON">
+            <summary>
+            发送给最小化窗口当它图标将要被重画
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_ICONERASEBKGND">
+            <summary>
+            此消息发送给某个最小化窗口，仅//当它在画图标前它的背景必须被重画
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NEXTDLGCTL">
+            <summary>
+            发送此消息给一个对话框程序去更改焦点位置
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SPOOLERSTATUS">
+            <summary>
+            每当打印管理列队增加或减少一条作业时发出此消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_DRAWITEM">
+            <summary>
+            当button，combobox，listbox，menu的可视外观改变时发送
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_MEASUREITEM">
+            <summary>
+            当button, combo box, list box, list view control, or menu item 被创建时
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_VKEYTOITEM">
+            <summary>
+            此消息有一个LBS_WANTKEYBOARDINPUT风格的发出给它的所有者来响应WM_KEYDOWN消息 
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_CHARTOITEM">
+            <summary>
+            此消息由一个LBS_WANTKEYBOARDINPUT风格的列表框发送给他的所有者来响应WM_CHAR消息 
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SETFONT">
+            <summary>
+            当绘制文本时程序发送此消息得到控件要用的颜色
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_GETFONT">
+            <summary>
+            应用程序发送此消息得到当前控件绘制文本的字体
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SETHOTKEY">
+            <summary>
+            应用程序发送此消息让一个窗口与一个热键相关连 
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_GETHOTKEY">
+            <summary>
+            应用程序发送此消息来判断热键与某个窗口是否有关联
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_QUERYDRAGICON">
+            <summary>
+            此消息发送给最小化窗口，当此窗口将要被拖放而它的类中没有定义图标，应用程序能返回一个图标或光标的句柄，当用户拖放图标时系统显示这个图标或光标
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_COMPAREITEM">
+            <summary>
+            发送此消息来判定combobox或listbox新增加的项的相对位置
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_COMPACTING">
+            <summary>
+            显示内存已经很少了
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_WINDOWPOSCHANGING">
+            <summary>
+            发送此消息给那个窗口的大小和位置将要被改变时，来调用setwindowpos函数或其它窗口管理函数
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_WINDOWPOSCHANGED">
+            <summary>
+            发送此消息给那个窗口的大小和位置已经被改变时，来调用setwindowpos函数或其它窗口管理函数
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_POWER">
+            <summary>
+            当系统将要进入暂停状态时发送此消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_COPYDATA">
+            <summary>
+            当一个应用程序传递数据给另一个应用程序时发送此消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_CANCELJOURNA">
+            <summary>
+            当某个用户取消程序日志激活状态，提交此消息给程序
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NOTIFY">
+            <summary>
+            当某个控件的某个事件已经发生或这个控件需要得到一些信息时，发送此消息给它的父窗口 
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_INPUTLANGCHANGEREQUEST">
+            <summary>
+            当用户选择某种输入语言，或输入语言的热键改变
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_INPUTLANGCHANGE">
+            <summary>
+            当平台现场已经被改变后发送此消息给受影响的最顶级窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_TCARD">
+            <summary>
+            当程序已经初始化windows帮助例程时发送此消息给应用程序
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_HELP">
+            <summary>
+            此消息显示用户按下了F1，如果某个菜单是激活的，就发送此消息个此窗口关联的菜单，否则就发送给有焦点的窗口，如果//当前都没有焦点，就把此消息发送给//当前激活的窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_USERCHANGED">
+            <summary>
+            当用户已经登入或退出后发送此消息给所有的窗口，//当用户登入或退出时系统更新用户的具体设置信息，在用户更新设置时系统马上发送此消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NOTIFYFORMAT">
+            <summary>
+            公用控件，自定义控件和他们的父窗口通过此消息来判断控件是使用ANSI还是UNICODE结构
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_STYLECHANGING">
+            <summary>
+            当调用SETWINDOWLONG函数将要改变一个或多个 窗口的风格时发送此消息给那个窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_STYLECHANGED">
+            <summary>
+            当调用SETWINDOWLONG函数一个或多个 窗口的风格后发送此消息给那个窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_DISPLAYCHANGE">
+            <summary>
+            当显示器的分辨率改变后发送此消息给所有的窗口
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_GETICON">
+            <summary>
+            此消息发送给某个窗口来返回与某个窗口有关连的大图标或小图标的句柄
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_SETICON">
+            <summary>
+            程序发送此消息让一个新的大图标或小图标与某个窗口关联
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCCREATE">
+            <summary>
+            当某个窗口第一次被创建时，此消息在WM_CREATE消息发送前发送
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCDESTROY">
+            <summary>
+            此消息通知某个窗口，非客户区正在销毁 
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCCALCSIZE">
+            <summary>
+            当某个窗口的客户区域必须被核算时发送此消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCHITTEST">
+            <summary>
+            移动鼠标，按住或释放鼠标时发生
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCPAuint">
+            <summary>
+            程序发送此消息给某个窗口当它（窗口）的框架必须被绘制时
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCACTIVATE">
+            <summary>
+            此消息发送给某个窗口仅当它的非客户区需要被改变来显示是激活还是非激活状态
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_GETDLGCODE">
+            <summary>
+            发送此消息给某个与对话框程序关联的控件，widdows控制方位键和TAB键使输入进入此控件通过应
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCMOUSEMOVE">
+            <summary>
+            当光标在一个窗口的非客户区内移动时发送此消息给这个窗口 非客户区为：窗体的标题栏及窗 的边框体
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCLBUTTONDOWN">
+            <summary>
+            当光标在一个窗口的非客户区同时按下鼠标左键时提交此消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCLBUTTONUP">
+            <summary>
+            当用户释放鼠标左键同时光标某个窗口在非客户区十发送此消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCLBUTTONDBLCLK">
+            <summary>
+            当用户双击鼠标左键同时光标某个窗口在非客户区十发送此消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCRBUTTONDOWN">
+            <summary>
+            当用户按下鼠标右键同时光标又在窗口的非客户区时发送此消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCRBUTTONUP">
+            <summary>
+            当用户释放鼠标右键同时光标又在窗口的非客户区时发送此消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCRBUTTONDBLCLK">
+            <summary>
+            当用户双击鼠标右键同时光标某个窗口在非客户区十发送此消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCMBUTTONDOWN">
+            <summary>
+            当用户按下鼠标中键同时光标又在窗口的非客户区时发送此消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCMBUTTONUP">
+            <summary>
+            当用户释放鼠标中键同时光标又在窗口的非客户区时发送此消息
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.ApiParameter.WM_NCMBUTTONDBLCLK">
+            <summary>
+            当用户双击鼠标中键同时光标又在窗口的非客户区时发送此消息
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.SystemOperation.ApiStatement">
+            <summary>
+            API声明
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.SendMessage(System.IntPtr,System.UInt32,System.UInt32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd">接收消息的窗口的句柄</param>
+            <param name="wMsg">消息标识符</param>
+            <param name="wParam">32位的特定附加信息</param>
+            <param name="lParam">32位特定附加信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.SendMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="hwnd">接收消息的窗口的句柄</param>
+            <param name="wMsg">消息标识符</param>
+            <param name="wParam">32位的特定附加信息</param>
+            <param name="lParam">32位特定附加信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.SendMessage(System.IntPtr,System.UInt32,System.UInt32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="hwnd"></param>
+            <param name="wMsg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.SendMessage(System.IntPtr,System.UInt32,System.IntPtr,System.Text.StringBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="hwnd"></param>
+            <param name="wMsg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.ExitWindowsEx(System.Int64,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="uFlags"></param>
+            <param name="dwReserved"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.ExitWindowsEx(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="flg"></param>
+            <param name="rea"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.GetWindowThreadProcessId(System.IntPtr,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd"></param>
+            <param name="lpdwProcessId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.OpenProcess(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="fdwAccess"></param>
+            <param name="fInherit"></param>
+            <param name="IDProcess"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.TerminateProcess(System.IntPtr,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hProcess"></param>
+            <param name="uExitCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.GetModuleFileName(System.IntPtr,System.Text.StringBuilder,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hModule"></param>
+            <param name="lpszFileName"></param>
+            <param name="nSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.ExtractIconEx(System.String,System.Int32,System.IntPtr@,System.IntPtr@,System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="fileName"></param>
+            <param name="index"></param>
+            <param name="hIconLarge"></param>
+            <param name="hIconSmall"></param>
+            <param name="nIcons"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.GetKeyState(System.Int32)">
+            <summary>
+            取得键状态的API函数  
+            </summary>
+            <param name="keyCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.GetVolumeInformation(System.String,System.String,System.Int32,System.Int32@,System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="lpRootPathName"></param>
+            <param name="lpVolumeNameBuffer"></param>
+            <param name="nVolumeNameSize"></param>
+            <param name="lpVolumeSerialNumber"></param>
+            <param name="lpMaximumComponentLength"></param>
+            <param name="lpFileSystemFlags"></param>
+            <param name="lpFileSystemNameBuffer"></param>
+            <param name="nFileSystemNameSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.AdjustTokenPrivileges(System.IntPtr,System.Boolean,Universal_ClassLibrary.SystemOperation.TokPriv1Luid@,System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="htok"></param>
+            <param name="disall"></param>
+            <param name="newst"></param>
+            <param name="len"></param>
+            <param name="prev"></param>
+            <param name="relen"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.LookupPrivilegeValue(System.String,System.String,System.Int64@)">
+            <summary>
+            
+            </summary>
+            <param name="host"></param>
+            <param name="name"></param>
+            <param name="pluid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.OpenProcessToken(System.IntPtr,System.Int32,System.IntPtr@)">
+            <summary>
+            
+            </summary>
+            <param name="h"></param>
+            <param name="acc"></param>
+            <param name="phtok"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.GetCurrentProcess">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.GetSystemDefaultLCID">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.SetLocaleInfo(System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Locale"></param>
+            <param name="LCType"></param>
+            <param name="lpLCData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.NetUserEnum(System.String,System.Int32,System.Int32,System.IntPtr@,System.Int32,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="servername"></param>
+            <param name="level"></param>
+            <param name="filter"></param>
+            <param name="bufptr"></param>
+            <param name="prefmaxlen"></param>
+            <param name="entriesread"></param>
+            <param name="totalentries"></param>
+            <param name="resume_handle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.NetApiBufferFree(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="Buffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.SetLocalTime(Universal_ClassLibrary.SystemOperation.SystemTime@)">
+            <summary>
+            
+            </summary>
+            <param name="lpSystemTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.SetForegroundWindow(System.IntPtr)">
+            <summary>
+            函数功能：该函数将创建指定窗口的线程设置到前台，
+            并且激活该窗口。键盘输入转向该窗口，并为用户改各种可视的记号。
+            系统给创建前台窗口的线程分配的权限稍高于其他线程。
+            </summary>
+            <param name="hWnd">将被激活并被调入前台的窗口句柄</param>
+            <returns>如果窗口设入了前台，返回值为非零；如果窗口未被设入前台，返回值为零</returns> 
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.keybd_event(System.Byte,System.Byte,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="bVk"></param>
+            <param name="bScan"></param>
+            <param name="dwFlags"></param>
+            <param name="dwExtraInfo"></param>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.FindWindowEx(System.IntPtr,System.UInt32,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="hwndParent"></param>
+            <param name="hwndChildAfter"></param>
+            <param name="lpszClass"></param>
+            <param name="lpszWindow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.EnumWindows(Universal_ClassLibrary.EnumWindowsProc,System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="ewp"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.GetWindowText(System.IntPtr,Universal_ClassLibrary.SystemOperation.STRINGBUFFER@,System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd"></param>
+            <param name="text"></param>
+            <param name="nMaxCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.IsWindowVisible(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.EnumChildWindows(System.IntPtr,Universal_ClassLibrary.EnumWindowsProc,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hWndParent"></param>
+            <param name="ewp"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.FindWindow(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="lpClassName"></param>
+            <param name="lpWindowName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.ShowCursor(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="bShow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.BlockInput(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="isBlock"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.FuckSysKey(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="enAble"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.SetWindowsHookEx(System.Int32,Universal_ClassLibrary.HookProc,System.IntPtr,System.Int32)">
+            <summary>
+            设置钩子 
+            </summary>
+            <param name="idHook"></param>
+            <param name="lpfn"></param>
+            <param name="hInstance"></param>
+            <param name="threadId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.UnhookWindowsHookEx(System.Int32)">
+            <summary>
+            抽掉钩子 
+            </summary>
+            <param name="idHook"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.CallNextHookEx(System.Int32,System.Int32,System.Int32,System.IntPtr)">
+            <summary>
+            调用下一个钩子 
+            </summary>
+            <param name="idHook"></param>
+            <param name="nCode"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.GetCurrentThreadId">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.GetModuleHandle(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.GetShortPathName(System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="lpszLongPath"></param>
+            <param name="shortFile"></param>
+            <param name="cchBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.ApiStatement.mciSendString(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="lpstrCommand"></param>
+            <param name="lpstrReturnString"></param>
+            <param name="uReturnLength"></param>
+            <param name="hwndCallback"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.SystemOperation.Equipment.Camera">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.Equipment.Camera.OpenCamera(System.Windows.Forms.Control)">
+            <summary>
+            打开摄像头
+            </summary>
+            <param name="TmpControl">摄像容器</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.Equipment.Camera.CloseCamera">
+            <summary>
+            关闭摄像头
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.Equipment.Camera.Photograph">
+            <summary>
+            拍照
+            </summary>
+            <returns>返回Image图片类型对象</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.ConvertTo">
+            <summary>
+            类型转换
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.ConvertTo.ToInt(System.Object)">
+            <summary>
+            Int类型转换
+            </summary>
+            <param name="itmeObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.ConvertTo.ToLong(System.Object)">
+            <summary>
+            Long类型转换
+            </summary>
+            <param name="TmpObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.ConvertTo.ToListString(System.Collections.Generic.List{System.Int32})">
+            <summary>
+             List String类型转换
+            </summary>
+            <param name="itmeListInt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.ConvertTo.ToListString(System.Collections.ArrayList)">
+            <summary>
+            List String类型转换
+            </summary>
+            <param name="itmeArrayList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.ConvertTo.ToListString(System.Data.DataTable,System.String)">
+            <summary>
+             List String类型转换
+            </summary>
+            <param name="ItmeTable"></param>
+            <param name="Columns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.ConvertTo.ToDataTable(System.Data.DataRow[],System.Data.DataTable)">
+            <summary>
+            DataTable类型转换
+            </summary>
+            <param name="ItmeDataRow">DataRow数组</param>
+            <param name="ItmeTableStructure">表结构</param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataBase.MySql">
+            <summary>
+            MySql操作类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.#ctor(System.String)">
+            <summary>
+            Sql连接
+            </summary>
+            <param name="Connect">数据库连接字符串</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.MySqlConnect">
+            <summary>
+            验证连接是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.Closetheconnection">
+            <summary>
+            关闭数据库连接
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.ReturnMySqlDataReader(System.String)">
+            <summary>
+            运用在显示单条数据上
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>SqlDataReader</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.Affected(System.String)">
+            <summary>
+            运用在增删改上
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.ReturnDataSet(System.String)">
+            <summary>
+            返回DataSet
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.Existence(System.String)">
+            <summary>
+            登陆验证用返回0或1，0是登陆失败1是登陆成功
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.ReturnDataTable(System.String)">
+            <summary>
+            返回DataTable
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.ReturnDataView(System.String)">
+            <summary>
+            返回DataView
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>DataView</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.MySqlBatch(System.Collections.ArrayList)">
+            <summary>
+            执行多条SQL语句，实现数据库事务。
+            </summary>
+            <param name="SQLStringList">多条SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.ReturnQueries(System.String)">
+            <summary>
+             返回MySql查询数据表的数值
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.ReturnMySqlCommand(System.String)">
+            <summary>
+            返回MySqlCommand
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.Creating(System.String)">
+            <summary>
+            MySql连接
+            </summary>
+            <param name="Connect">数据库连接字符串</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.AddCheckQuotationMark(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.AddQuotationMark(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.MySql.CheckQuotationMark(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Universal_ClassLibrary.DataBase.MySql.GetMySqlcon">
+            <summary>
+            获取连接对象
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataBase.Oracle">
+            <summary>
+            Oracle操作类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.#ctor(System.String)">
+            <summary>
+            Oracle连接
+            </summary>
+            <param name="Connect">数据库连接字符串</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.OracleConnect">
+            <summary>
+            验证连接是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.Closetheconnection">
+            <summary>
+            关闭数据库连接
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.ReturnOracleDataReader(System.String)">
+            <summary>
+            运用在显示单条数据上
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>OracleDataReader</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.Affected(System.String)">
+            <summary>
+            运用在增删改上
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.ReturnDataSet(System.String)">
+            <summary>
+            返回DataSet
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.Existence(System.String)">
+            <summary>
+            登陆验证用返回0或1，0是登陆失败1是登陆成功
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.ReturnDataTable(System.String)">
+            <summary>
+            返回DataTable
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.ReturnDataView(System.String)">
+            <summary>
+            返回DataView
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>DataView</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.SqlBatch(System.Collections.ArrayList)">
+            <summary>
+            执行多条SQL语句，实现数据库事务。
+            </summary>
+            <param name="SQLStringList">多条SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.ReturnQueries(System.String)">
+            <summary>
+             返回Oracle查询数据表的数值
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.ReturnOracleCommand(System.String)">
+            <summary>
+            返回SqlCommand
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.Creating(System.String)">
+            <summary>
+            Oracle连接
+            </summary>
+            <param name="Connect">数据库连接字符串</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.AddCheckQuotationMark(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.AddQuotationMark(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Oracle.CheckQuotationMark(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Universal_ClassLibrary.DataBase.Oracle.GetOracleCon">
+            <summary>
+            获取连接对象
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataTable.DataTableCopy">
+            <summary>
+            DataTable数据拷贝类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTableCopy.DataCopy(System.Data.DataTable,System.Data.DataTable)">
+            <summary>
+            数据拷贝
+            </summary>
+            <param name="ItmeTable">数据源</param>
+            <param name="ItmeTableTarget">目标数据源</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTableCopy.StructureDataCopy(System.Data.DataTable,System.Data.DataTable)">
+            <summary>
+            结构数据拷贝
+            </summary>
+            <param name="ItmeTable">数据源</param>
+            <param name="ItmeTableTarget">目标数据源</param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.EnumWindowsProc">
+            <summary>
+            
+            </summary>
+            <param name="p_Handle"></param>
+            <param name="p_Param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.HookProc">
+            <summary>
+            
+            </summary>
+            <param name="nCode"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.ThreadPondDelegate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.FileDownLoadMaxThread">
+            <summary>
+            Http文件下载 总进度数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.FileDownLoadFacingOneThread">
+            <summary>
+            Http文件下载  当前进度数
+            </summary>
+            <param name="IntFacingOne"></param>
+        </member>
+        <member name="T:Universal_ClassLibrary.SystemOperation.FormsHandle">
+            <summary>
+            对系统下的窗体操作
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.All_Control_Handle">
+            <summary>
+            返回所有控件句柄
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.NetEnumControl(System.IntPtr,System.Int32)">
+            <summary>
+            返回所有控件句柄核心方法
+            </summary>
+            <param name="p_Handle"></param>
+            <param name="p_Param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.Writing_Numerical(System.Int32,System.String)">
+            <summary>
+            向指定的控件写值
+            </summary>
+            <param name="Son_Control">句柄</param>
+            <param name="Con_Text">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.Testing_Form">
+            <summary>
+            检测窗体时候存在
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.Gains_Focus(System.Int32)">
+            <summary>
+            控件获得焦点
+            </summary>
+            <param name="Son_Control">句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.Form_Gains_Focus(System.Int32)">
+            <summary>
+            窗体获得焦点
+            </summary>
+            <param name="Son_Control">句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.Form_Lose_Focus(System.Int32)">
+            <summary>
+            窗体失去焦点
+            </summary>
+            <param name="Son_Control">句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.Closed_Window(System.String)">
+            <summary>
+            关闭弹出窗口
+            </summary>
+            <param name="WindowName">要关闭的窗体名字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.Closed_Window(System.Int32)">
+            <summary>
+            关闭弹出窗口
+            </summary>
+            <param name="WindowHandle">句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.ValueRead(System.Int32)">
+            <summary>
+            读取指控控件值
+            </summary>
+            <param name="son">句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.NetEnumWindows(System.IntPtr,System.Int32)">
+            <summary>
+            返回所有窗体句柄核心方法
+            </summary>
+            <param name="p_Handle"></param>
+            <param name="p_Param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.Get_Window_Handle">
+            <summary>
+            获取所有窗体句柄
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.AccessControlHandle(System.Int32,System.String)">
+            <summary>
+            获取指定窗体控件句柄
+            </summary>
+            <param name="FromHandle"></param>
+            <param name="ControlName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.WindowHandle(System.String)">
+            <summary>
+            获取指定窗体的句柄
+            </summary>
+            <param name="FromText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.Activated_Form(System.String)">
+            <summary>
+            激活窗体
+            </summary>
+            <param name="FromText"></param>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.GetAppRunPathFromHandle(System.IntPtr)">
+            <summary>
+            通过句柄获取运行程序路径
+            </summary>
+            <param name="hwnd">窗体句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.FormsHandle.GetSmallIconFromHandle(System.IntPtr)">
+            <summary>
+            根据句柄获取运行程序小图标 //当然也可以获取大图标
+            </summary>
+            <param name="hwnd">句柄</param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.SystemOperation.RegistryEx">
+            <summary>
+            注册表操作类
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.RegistryEx.rootkey">
+            <summary>
+            当前操作的注册表根键
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.RegistryEx.#ctor(System.String)">
+            <summary>
+            构造根键为RootKey的注册表操作类，缺省打开Current_User主键 
+            </summary>
+            <param name="RootKey">要打开的注册表根键，字符串型 如 LOCAL_MACHINE 代表 LocalMachine注册表段</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.RegistryEx.GetRegVal(System.String,System.String,System.String)">
+            <summary>
+            读取路径为keypath，键名为keyname的注册表键值，缺省返回def 
+            </summary>
+            <param name="keypath">读取路径</param>
+            <param name="keyname">键名</param>
+            <param name="def">默认值</param>
+            <returns>读取到的注册表键值</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.RegistryEx.SetRegVal(System.String,System.String,System.String)">
+            <summary>
+            设置路径为keypath，键名为keyname的注册表键值为keyval 
+            </summary>
+            <param name="keypath">设置路径</param>
+            <param name="keyname">键名</param>
+            <param name="keyval">键值</param>
+            <returns>设置结果 True/False 成功与否</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.RegistryEx.CreateRegKey(System.String)">
+            <summary>
+             创建路径为keypath的键
+            </summary>
+            <param name="keypath">欲创建的键路径</param>
+            <returns>创建后的注册表键，失败返回null</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.RegistryEx.DelRegSubKey(System.String)">
+            <summary>
+            删除路径为keypath的子项
+            </summary>
+            <param name="keypath">欲删除的路径</param>
+            <returns>删除结果 True/False 成功与否</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.RegistryEx.DelRegSubKeyTree(System.String)">
+            <summary>
+            删除路径为keypath的子项及其附属子项
+            </summary>
+            <param name="keypath">欲删除的路径</param>
+            <returns>删除结果 True/False 成功与否</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.RegistryEx.DelRegKeyVal(System.String,System.String)">
+            <summary>
+            删除路径为keypath下键名为keyname的键值
+            </summary>
+            <param name="keypath">路径</param>
+            <param name="keyname">键名</param>
+            <returns>删除结果 True/False 成功与否</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataBase.Access">
+            <summary>
+            Access操作类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.#ctor(System.String)">
+            <summary>
+            Access连接
+            </summary>
+            <param name="Connect">连接字符串</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Access连接
+            </summary>
+            <param name="Version">数据库版本</param>
+            <param name="Path">数据库所在的路径</param>
+            <param name="Password">数据库密码</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.Closetheconnection">
+            <summary>
+            关闭数据库连接
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.ReturnOleDbDataReader(System.String)">
+            <summary>
+            运用在显示单条数据上
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>OleDbDataReader</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.Returnaffected(System.String)">
+            <summary>
+            运用在增删改上
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.Affected(System.String)">
+            <summary>
+            运用在增删改上
+            </summary>
+            <param name="sql">Sql语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.ReturnDataSet(System.String)">
+            <summary>
+            返回一个数据集
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.LoginAuthentication(System.String)">
+            <summary>
+            登陆验证用返回0或1，0是登陆失败1是登陆成功
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.ReturnQueries(System.String)">
+            <summary>
+             返回SQL查询数据表的数值
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.ReturnDataTable(System.String)">
+            <summary>
+            返回一个表
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.ReturnDataView(System.String)">
+            <summary>
+            返回DataView
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>DataView</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.SqlBatch(System.Collections.ArrayList)">
+            <summary>
+            执行多条SQL语句，实现数据库事务
+            </summary>
+            <param name="SQLStringList">多条SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.ReturnOleDbCommand(System.String)">
+            <summary>
+            返回OleDbCommand
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns>OleDbCommand</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.Access.AccessConnection(System.String,System.String,System.String)">
+            <summary>
+            Access连接
+            </summary>
+            <param name="Version">数据库版本</param>
+            <param name="Path">数据库所在的路径</param>
+            <param name="Password">数据库密码</param>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataBase.SqlServer">
+            <summary>
+            SqlServer操作类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.#ctor(System.String)">
+            <summary>
+            Sql连接
+            </summary>
+            <param name="Connect">数据库连接字符串</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Sql连接
+            </summary>
+            <param name="Version">数据库版本</param>
+            <param name="Database">数据库名字</param>
+            <param name="Account">帐号</param>
+            <param name="Password">密码</param>
+            <param name="Address">数据库地址</param>
+            <returns>SqlServerInterface</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.SqlConnect">
+            <summary>
+            验证连接是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.Closetheconnection">
+            <summary>
+            关闭数据库连接
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.ReturnSqlDataReader(System.String)">
+            <summary>
+            运用在显示单条数据上
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>SqlDataReader</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.Affected(System.String)">
+            <summary>
+            运用在增删改上
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>返回受影响行数</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.ReturnDataSet(System.String)">
+            <summary>
+            返回DataSet
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.Existence(System.String)">
+            <summary>
+            登陆验证用返回0或1，0是登陆失败1是登陆成功
+            </summary>
+            <param name="sql">传SQL语句</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.ReturnDataTable(System.String)">
+            <summary>
+            返回DataTable
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.ReturnDataView(System.String)">
+            <summary>
+            返回DataView
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>DataView</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.SqlBatch(System.Collections.ArrayList)">
+            <summary>
+            执行多条SQL语句，实现数据库事务。
+            </summary>
+            <param name="SQLStringList">多条SQL语句</param>
+            <returns>返回TRUE FALSE</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.ReturnQueries(System.String)">
+            <summary>
+             返回SQL查询数据表的数值
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.ReturnSqlCommand(System.String)">
+            <summary>
+            返回SqlCommand
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.SubmitDataTable(System.Data.DataTable,System.String,System.Int32,System.Int32,System.Collections.ArrayList)">
+            <summary>
+            提交数据集
+            </summary>
+            <param name="datatable">datatable</param>
+            <param name="table">目标表</param>
+            <param name="i">超时时间秒</param>
+            <param name="hs">总行数</param>
+            <param name="sbcm">设置SqlBulkCopyColumnMapping导入到ArrayList</param>
+            <returns>大于0执行成功</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.Creating(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Sql连接
+            </summary>
+            <param name="Version">数据库版本</param>
+            <param name="Database">数据库名字</param>
+            <param name="Account">帐号</param>
+            <param name="Password">密码</param>
+            <param name="Address">数据库地址</param>
+            <returns>SqlServerInterface</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataBase.SqlServer.Creating(System.String)">
+            <summary>
+            Sql连接
+            </summary>
+            <param name="Connect">数据库连接字符串</param>
+        </member>
+        <member name="P:Universal_ClassLibrary.DataBase.SqlServer.GetSqlcon">
+            <summary>
+            获取连接对象
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataSet.DataSetSort">
+            <summary>
+            DataSet排序
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataSet.DataSetToAccess">
+            <summary>
+            将DataSet数据导出到文件中Access文件
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataSet.DataSetToAccess.DataSetExportToAccess(System.Data.DataSet,System.String,System.String,System.String@)">
+            <summary>
+            将DataSet数据导出到文件中Access文件
+            </summary>
+            <param name="ds">数据集</param>
+            <param name="filename">文件名</param>
+            <param name="tabName">表名</param>
+            <param name="reMsg">返回消息</param>
+            <returns>bool</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataSet.DataSetToExcel">
+            <summary>
+            将DataSet数据导出到Excel文件
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataSet.DataSetToExcel.DataSetExportToExcel(System.Data.DataSet,System.String,System.String,System.String@)">
+            <summary>
+            将DataSet数据导出到Excel文件
+            </summary>
+            <param name="ds">数据集</param>
+            <param name="filename">文件名</param>
+            <param name="tabName">表名</param>
+            <param name="reMsg">返回消息</param>
+            <returns>bool</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataTable.DataGoEcho">
+            <summary>
+            DATATABLE去重复类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataGoEcho.DataTableToRepeat(System.Data.DataTable,System.String)">
+            <summary>
+            DataTable去重复
+            </summary>
+            <param name="TmpDataTable">数据源</param>
+            <param name="FieldNames">单列去重复</param>
+            <returns>返回DATATABLE</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataGoEcho.DataTableToRepeat(System.Data.DataTable,System.String[])">
+            <summary>
+            DataTable去重复
+            </summary>
+            <param name="TmpDataTable">数据源</param>
+            <param name="FieldNames">多列去重复</param>
+            <returns>返回DATATABLE</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataTable.DataTabaleHanDle">
+            <summary>
+            综合操作类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTabaleHanDle.RemoveBar(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            去掉指定类的指定值
+            </summary>
+            <param name="ItmeTable">数据源</param>
+            <param name="Column">指定列</param>
+            <param name="Value">要删除的数据</param>
+            <returns>返回DATATABLE</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTabaleHanDle.ColumnValueSubstitution(System.Data.DataTable,System.String,System.String,System.String)">
+            <summary>
+            指定列替换值
+            </summary>
+            <param name="ItmeTable"></param>
+            <param name="Column"></param>
+            <param name="Appoint"></param>
+            <param name="Replacement"></param>
+            <returns>返回DATATABLE</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTabaleHanDle.DataTableSelect(System.Data.DataTable,System.String)">
+            <summary>
+            DtatTable查询方法
+            </summary>
+            <param name="ItmeDataTable">数据源</param>
+            <param name="ItmeWhere">where条件</param>
+            <returns>返回DATATABLE</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTabaleHanDle.RowMovement(System.Data.DataTable,System.Int64,System.String,Universal_ClassLibrary.MobileType)">
+            <summary>
+            行移动 上移 下移
+            </summary>
+            <param name="TmpTable">数据源</param>
+            <param name="SelectRow">当前行索引</param>
+            <param name="OrderList">行顺序列</param>
+            <param name="Mobile"></param>
+            <returns>返回DATATABLE</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTabaleHanDle.GetPagedTable(System.Data.DataTable,System.Int32,System.Int32)">
+            <summary>
+            DataTable分页
+            </summary>
+            <param name="dt">DataTable</param>
+            <param name="PageIndex">页索引,注意：从1开始</param>
+            <param name="PageSize">每页大小</param>
+            <returns>分好页的DataTable数据</returns>              第1页        每页10条
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTabaleHanDle.PageCount(System.Int32,System.Int32)">
+            <summary>
+            返回分页的页数
+            </summary>
+            <param name="count">总条数</param>
+            <param name="pageye">每页显示多少条</param>
+            <returns>如果 结尾为0：则返回1</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTabaleHanDle.ColumnToSizeWriting(System.Data.DataTable,Universal_ClassLibrary.SizeWriting)">
+            <summary>
+            DataTable列名转大小写
+            </summary>
+            <param name="TmpTB">数据源</param>
+            <param name="TmpSizeWriting">大小写</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTabaleHanDle.DataTableAlignment(System.Data.DataTable,Universal_ClassLibrary.AlignmentType)">
+            <summary>
+            DataTable上对齐或下对齐
+            </summary>
+            <param name="_DataTable">数据源</param>
+            <param name="_AlignmentType">对齐类型</param>
+            <returns>返回结果DATATABLE</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataTable.DataTableAddSequence">
+            <summary>
+            DataTable添加序号列
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTableAddSequence.GetDataTable(System.Data.DataTable,System.String)">
+            <summary> 
+            给已有DataTable的首列加上序号列
+            </summary>
+            <param name="srcTable">源数据表</param>
+            <param name="Sequence">给编号起名字</param>
+            <returns>结果数据表</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTableAddSequence.GetDataTable(System.Data.DataTable,System.String,System.String[])">
+            <summary>
+            取出指定数据表中指定列数据并在首列加上编号列
+            </summary>
+            <param name="srcTable">源数据表</param>
+            <param name="Sequence">给编号起名字</param>
+            <param name="para">需要取出源数据表的列名</param>
+            <returns>结果数据表</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataTable.DataTableSort">
+            <summary>
+            DataTable排序
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTableSort.DataTableLengthPacketSort(System.Data.DataTable,System.String,Universal_ClassLibrary.LiftingType)">
+            <summary>
+            DataTable 小数长度分组排序算法
+            </summary>
+            <param name="TableItme">数据源</param>
+            <param name="Column">要排序的列</param>
+            <param name="Lifting">升降 ASC DESC</param>
+            <returns>返回DATATABLE</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTableSort.DataTableStringSort(System.Data.DataTable,System.String,Universal_ClassLibrary.LiftingType)">
+            <summary>
+            DataTable 字符串排序
+            </summary>
+            <param name="TableItme">数据源</param>
+            <param name="Column">要排序的列</param>
+            <param name="Lifting">升降 ASC DESC</param>
+            <returns>返回DATATABLE</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTableSort.DataTableArabSort(System.Data.DataTable,System.String,Universal_ClassLibrary.LiftingType)">
+            <summary>
+            DataTable 阿拉伯数字排序
+            </summary>
+            <param name="TmpDataTable">数据源</param>
+            <param name="ColumnName">要排序的列</param>
+            <param name="Lifting">升降</param>
+            <returns>然会DATATABLE</returns> 
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTableSort.DataTableArabSort(System.Data.DataTable,System.String,Universal_ClassLibrary.LiftingType,System.String)">
+            <summary>
+            DataTable 阿拉伯数字排序
+            </summary>
+            <param name="TmpDataTable">数据源</param>
+            <param name="ColumnName">排序字段</param>
+            <param name="Lifting">排序升降</param>
+            <param name="TmpFieldType">排序字段类型</param>
+            <returns>返回DATATABLE</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataTableSort.DataTableSmartSort(System.Data.DataTable,System.String,Universal_ClassLibrary.LiftingType)">
+            <summary>
+            DataTable 智能排序
+            </summary>
+            <param name="TmpTableData">数据源</param>
+            <param name="Column">指定列</param>
+            <param name="Lifting">升降序</param>
+            <returns>返回DATATABLE</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.Decrypt.DesFileDecode">
+            <summary>
+            DES文件解密类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Decrypt.DesFileDecode.DESFileDecode(System.String,System.String,System.String)">
+            <summary>
+            文件解密方法
+            </summary>
+            <param name="DecodeFile">要解密的文件路径</param>
+            <param name="sKey">密钥</param>
+            <param name="SaveFile">解密后文件保存路径</param>
+        </member>
+        <member name="T:Universal_ClassLibrary.Decrypt.DesStringDecode">
+            <summary>
+            DES解密类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Decrypt.DesStringDecode.DESDecrypt(System.String,System.String)">
+            <summary>
+            DES解密方法
+            </summary>
+            <param name="pToDecrypt">解密string</param>
+            <param name="sKey">解密key(要8位数)</param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.Encrypt.DesFileEncrypt">
+            <summary>
+            DES文件加密类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Encrypt.DesFileEncrypt.DESFileEncrypt(System.String,System.String,System.String)">
+            <summary>
+            DES文件加密方法
+            </summary>
+            <param name="EncryptFile">要加密的文件</param>
+            <param name="sKey">密钥</param>
+            <param name="SaveFile">解密后文件保存路径</param>
+        </member>
+        <member name="T:Universal_ClassLibrary.Encrypt.DesStringEncrypt">
+            <summary>
+            DES加密类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Encrypt.DesStringEncrypt.DESEncrypt(System.String,System.String)">
+            <summary>
+            DES加密方法
+            </summary>
+            <param name="pToEncrypt"></param>
+            <param name="sKey"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.Encrypt.Md5StringEncrypt">
+            <summary>
+            MD5字符串加密
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Encrypt.Md5StringEncrypt.MD5Encrypt(System.String,Universal_ClassLibrary.MD5Type)">
+            <summary>
+            Md5加密
+            </summary>
+            <param name="input">需要加密的字符串</param>
+            <param name="TmpMD5Type">MD5加密类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Encrypt.Md5StringEncrypt.Md5_16_Encrypt(System.String)">
+            <summary>
+            MD5 16位加密
+            </summary>
+            <param name="ConvertString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Encrypt.Md5StringEncrypt.Md5_32_Encrypt(System.String)">
+            <summary>
+            MD5  32位加密
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.MobileType">
+            <summary>
+            移动
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.MobileType.On">
+            <summary>
+            上
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.MobileType.Under">
+            <summary>
+            下
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.LiftingType">
+            <summary>
+            升降
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.LiftingType.ASC">
+            <summary>
+            升序
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.LiftingType.DESC">
+            <summary>
+            降序
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.ThereafterType">
+            <summary>
+            此后此前
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.ThereafterType.Positive">
+            <summary>
+            正向
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.ThereafterType.Reverse">
+            <summary>
+            反向
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.MD5Type">
+            <summary>
+            MD5加密类型
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.MD5Type.Capital16">
+            <summary>
+            大写16位加密类型
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.MD5Type.lowercase16">
+            <summary>
+            小写16位加密类型
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.MD5Type.Capital32">
+            <summary>
+            大写32位加密类型
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.MD5Type.lowercase32">
+            <summary>
+            小写32位加密类型
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.KeepRemove">
+            <summary>
+            保留移除
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.KeepRemove.Keep">
+            <summary>
+            保留
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.KeepRemove.Remove">
+            <summary>
+            移除
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.SizeWriting">
+            <summary>
+            大小写
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SizeWriting.Upper">
+            <summary>
+            大写
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SizeWriting.Lower">
+            <summary>
+            小写
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.OfficeType">
+            <summary>
+            Office类型
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.OfficeType.Word">
+            <summary>
+            word类型
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.OfficeType.Excel">
+            <summary>
+            excel类型
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.OfficeType.Ppt">
+            <summary>
+            PowerPoint类型 
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.AlignmentType">
+            <summary>
+            对齐类型
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.AlignmentType.On">
+            <summary>
+            上对齐
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.AlignmentType.Under">
+            <summary>
+            下对齐
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.File.FileHandle">
+            <summary>
+            文件操作类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="isDisposing"></param>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.TakeTheSuffix(System.String)">
+            <summary>
+            取后缀名
+            </summary>
+            <param name="filename">文件名</param>
+            <returns>.gif|.html格式</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.WriteToFile(System.String,System.String)">
+            <summary>
+            写文件
+            </summary>
+            <param name="Path">文件路径</param>
+            <param name="Strings">文件内容</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.ReadFile(System.String)">
+            <summary>
+            读文件
+            </summary>
+            <param name="Path">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.AppendFile(System.String,System.String)">
+            <summary>
+            追加文件
+            </summary>
+            <param name="Path">文件路径</param>
+            <param name="strings">内容</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.CopyFile(System.String,System.String)">
+            <summary>
+            拷贝文件
+            </summary>
+            <param name="OrignFile">原始文件</param>
+            <param name="NewFile">新文件路径</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.DeleteFile(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="Path">路径</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.MoveFile(System.String,System.String)">
+            <summary>
+            移动文件
+            </summary>
+            <param name="OrignFile">原始路径</param>
+            <param name="NewFile">新路径</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.FileCreate(System.String)">
+            <summary>
+            文件创建
+            </summary>
+            <param name="Path"></param>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.CopyDir(System.String,System.String)">
+            <summary>
+            指定文件夹下面的所有内容copy到目标文件夹下面
+            </summary>
+            <param name="srcPath">原始路径</param>
+            <param name="aimPath">目标文件夹</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.GetFileSize(System.String)">
+            <summary>
+            获取文件夹大小
+            </summary>
+            <param name="dirPath">文件夹路径</param>
+            <returns>返回文件大小</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.AccessToTheSpecifiedFileAttribute(System.String)">
+            <summary>
+            获取指定文件详细属性
+            </summary>
+            <param name="filePath">文件详细路径</param>
+            <returns>返回详细信息</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.SetFileAttributes(System.String)">
+            <summary>
+            去掉文件只读属性
+            </summary>
+            <param name="aFilePath">文件路径</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.FileToByte(System.String)">
+            <summary>
+            文件转Byte数组
+            </summary>
+            <param name="fileName">要转换的文件路径</param>
+            <returns>返回TRUE FALSE</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.File.FileHandle.ByteToFile(System.Byte[],System.String)">
+            <summary>
+            Byte数组转文件
+            </summary>
+            <param name="pReadByte">二进制数组</param>
+            <param name="fileName">生成文件路径</param>
+            <returns>返回TRUE FALSE</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.Folder.FolderHandle">
+            <summary>
+            目录操作类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Folder.FolderHandle.GetBeforeCatalogFileUrl(System.String)">
+            <summary>
+            获取当前目录下的所有文件地址
+            </summary>
+            <param name="TmpCatalogUrl">目录地址</param>
+            <returns>返回地址数组</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Folder.FolderHandle.FileTypeFiltrate(System.Collections.ArrayList,System.String,System.Boolean)">
+            <summary>
+            文件类型过滤
+            </summary>
+            <param name="TmpArrayList">数据源</param>
+            <param name="TmpWhere">条件:.BMP|.JPG|.DOC</param>
+            <param name="TmpPersist"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Folder.FolderHandle.FileTypeFiltrate(System.Collections.Generic.List{System.String},System.String,System.Boolean)">
+            <summary>
+            文件类型过滤
+            </summary>
+            <param name="TmpStringList">数据源</param>
+            <param name="TmpWhere">条件:.BMP|.JPG|.DOC</param>
+            <param name="TmpPersist">条件是否保留</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Folder.FolderHandle.GetFold(System.String)">
+            <summary>
+            获取指定文件夹下目录
+            </summary>
+            <param name="path">文件夹路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Folder.FolderHandle.GetFils(System.String)">
+            <summary>
+            获取指定目录下的文件
+            </summary>
+            <param name="Path"></param>
+            <param name="TypeOfFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Folder.FolderHandle.TheCurrentDirectoryToCreateDirectory(System.String,System.String)">
+            <summary>
+            在当前目录下创建目录
+            </summary>
+            <param name="OrignFolder">当前目录</param>
+            <param name="NewFloder">新目录</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.Folder.FolderHandle.CreateFolder(System.String)">
+            <summary>
+            创建文件夹
+            </summary>
+            <param name="Path"></param>
+        </member>
+        <member name="M:Universal_ClassLibrary.Folder.FolderHandle.Exists(System.String)">
+            <summary>
+            检测文件夹是否存在
+            </summary>
+            <param name="FileML">文件夹目录</param>
+            <returns>返回TRUE  FALSE</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Folder.FolderHandle.DeleteFolderUnderFile(System.String)">
+            <summary>
+            删除目录下的所有文件
+            </summary>
+            <param name="FolderAddress">目录地址</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.Folder.FolderHandle.DeleteDirectoriesAndFiles(System.String)">
+            <summary>
+            递归删除文件夹目录及文件
+            </summary>
+            <param name="dir">文件目录</param> 
+        </member>
+        <member name="T:Universal_ClassLibrary.GlobalConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.GlobalConfig.FormName">
+            <summary>
+            需要检测程序名称
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.GlobalConfig.PATH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.GlobalConfig.dwReserved">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.GlobalConfig.HWND_BROADCAST">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.GlobalConfig.KeyBoard_Key(System.String)">
+            <summary>
+            16进制转换方法
+            </summary>
+            <param name="characters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.GlobalConfig.NetDataTypeToDataBaseType(System.String)">
+            <summary>
+            把.net数据类型转换为Db数据类型
+            </summary>
+            <param name="DataType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.SystemOperation.keyboard">
+            <summary>
+            键盘对系统的操作
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.keyboard.Enter(System.Int32)">
+            <summary>
+            执行回车键
+            </summary>
+            <param name="son">句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.keyboard.SimulationKeyboard(System.String)">
+            <summary>
+            模拟键盘操作
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.keyboard.Hook_Start">
+            <summary>
+            键盘锁定
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.keyboard.Hook_Clear">
+            <summary>
+            键盘解锁
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.keyboard.KeyBoardHookProc(System.Int32,System.Int32,System.IntPtr)">
+            <summary>
+            键盘锁定 与  键盘解锁  核心方法
+            </summary>
+            <param name="nCode"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.keyboard.PrivateIntKeyState(System.Int32)">
+            <summary>
+            按键是否按下 按下返回true否则返回false
+            </summary>
+            <param name="hex">16进制</param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.SystemOperation.KeyBoardHookStruct">
+            <summary>
+            键盘Hook结构函数 
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.KeyBoardHookStruct.vkCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.KeyBoardHookStruct.scanCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.KeyBoardHookStruct.flags">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.KeyBoardHookStruct.time">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.KeyBoardHookStruct.dwExtraInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.SystemOperation.Mouse">
+            <summary>
+            鼠标对系统的操作
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.Mouse.SingleEvent(System.Int32)">
+            <summary>
+            对控件的单击
+            </summary>
+            <param name="son"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.Mouse.ShowMouse">
+            <summary>
+            显示鼠标
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.Mouse.HideMouse">
+            <summary>
+            隐藏鼠标
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.DataTable.DataToAccess">
+            <summary>
+            DataTable转Access文件
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.DataTable.DataToAccess.DataTableExportToAccess(System.Data.DataTable,System.String,System.String,System.String@)">
+            <summary>
+            将datatable数据导出到文件中Access文件
+            </summary>
+            <param name="dt">数据集</param>
+            <param name="filename">文件名</param>
+            <param name="tabName">表名</param>
+            <param name="reMsg">返回消息</param>
+            <returns>bool</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.JSON.JsonConvertTo">
+            <summary>
+            JSON转换类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.JSON.JsonConvertTo.JsonToDataTable``1(``0)">
+            <summary>
+            JSON转DATATABLE
+            </summary>
+            <param name="TmpJSON">JSON字符串</param>
+            <returns>返回DATATABLE数据</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.JSON.JsonConvertTo.DataTableToJson(System.Data.DataTable)">
+            <summary>
+            DataTable转JSON
+            </summary>
+            <param name="TmpDataTable">DataTable数据源</param>
+            <returns>返回JSON数据</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.JSON.JsonConvertTo.JsonToString``1(``0)">
+            <summary>
+            JSON转String
+            </summary>
+            <param name="TmpJSON">JSON字符串</param>
+            <returns>返回字符串数据</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.JSON.JsonConvertTo.StringToJson``1(``0)">
+            <summary>
+            String转JSON
+            </summary>
+            <param name="TmpStr">String数据源</param>
+            <returns>返回JSON数据</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.JSON.JsonConvertTo.ListToJson``1(System.Collections.Generic.List{``0})">
+            <summary>
+            List T转JSON
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="TmpListT">List类型</param>
+            <returns>返回JSON数据</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.JSON.JsonConvertTo.JsonToList``1(``0)">
+            <summary>
+            JSON转 List T
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="TmpJSON">JSON字符串</param>
+            <returns>返回List T数据</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.List.ListGoEcho">
+            <summary>
+            List去重复类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.List.ListGoEcho.ListDistinct``1(System.Collections.Generic.List{``0},Universal_ClassLibrary.ThereafterType)">
+            <summary>
+             List去重复
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="TmpList">数据源</param>
+            <param name="BeforeAfter">模式</param>
+            <returns>返回LIST</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.List.ListHanDle">
+            <summary>
+            List综合操作类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.List.ListHanDle.ListDataComparison(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            List数据比较
+            </summary>
+            <param name="ListTheLord">主比较数组</param>
+            <param name="ListWas">被比较数组</param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.List.ListMatchSelect">
+            <summary>
+            对List进行赛选操作类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.List.ListMatchSelect.ListCharacterNumber(System.Collections.Generic.List{System.String})">
+            <summary>
+            赛选同样字符有多少个   Name是字符   Leng是字符个数
+            </summary>
+            <param name="ListItme">数据源</param>
+            <returns>返回DataTable表  Name列   Leng列</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.List.ListMatchSelect.ListMatchSelectedSeveralRepeat(System.Collections.Generic.List{System.String})">
+            <summary>
+            赛选有几个是重复的
+            </summary>
+            <param name="itmelist">返回有几个是重复的    返回个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.List.ListMatchSelect.ListSelectExistence(System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            ListString查询是否存在
+            </summary>
+            <param name="ItmeListString"></param>
+            <param name="Where"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.List.ListSort">
+            <summary>
+            List排序类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.List.ListSort.ListSmartSort``1(System.Collections.Generic.List{``0},Universal_ClassLibrary.LiftingType)">
+            <summary>
+            List T 智能排序
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ListItme">数据源</param>
+            <param name="Lifting">升降</param>
+            <returns>返回List</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.List.ListSort.TListSort``1(System.Collections.Generic.List{``0},Universal_ClassLibrary.LiftingType)">
+            <summary>
+            List T 排序
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="TmpListT">数据源</param>
+            <param name="Lifting">升降</param>
+            <returns>返回LIST</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.EMail.SendEMail">
+            <summary>
+            邮件发送类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.EMail.SendEMail.SendSMTPEMail(System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            邮件发送
+            </summary>
+            <param name="MailServerAddress">邮件服务器地址</param>
+            <param name="MailSendAddress">发邮件地址</param>
+            <param name="Pwd">密码</param>
+            <param name="MailCollectAddress">收邮件地址,逗号分隔</param>
+            <param name="Theme">主题</param>
+            <param name="Content">内容</param>
+            <param name="ImgUrls">邮件内容中图片本地磁盘地址</param>
+        </member>
+        <member name="T:Universal_ClassLibrary.Money">
+            <summary>
+            钱 操作类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Money.DaXieMoney(System.Double,System.Boolean)">
+            <summary>
+            把数字金额转换成人民币大写
+            </summary>
+            <param name="DataInput">要转换的数字金额</param>
+            <param name="DisplayZero">是否显示全部零</param>
+            <returns>返回大写人民币字符串</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.NetWork.Http">
+            <summary>
+            http操作类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.NetWork.Http.FileDownLoad(System.String,System.String)">
+            <summary>
+            文件下载
+            </summary>
+            <param name="url">Url   例如http://www.123kmn.com/1.exe</param>
+            <param name="filename">保存路径  例如c:aking\1.exe</param>
+        </member>
+        <member name="E:Universal_ClassLibrary.NetWork.Http.FileDownLoadMaxThreadEvent">
+            <summary>
+            文件最大数
+            </summary>
+        </member>
+        <member name="E:Universal_ClassLibrary.NetWork.Http.FileDownLoadFacingOneThreadEvent">
+            <summary>
+            进度事件
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.Picture.BitmapManipulator">
+            <summary>
+            Utility class with static methods that do various useful things
+            with bitmaps that require multiple GDI+ calls with .NET CLR
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.Picture.BitmapManipulator.supportedMimeTypes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.GetBitmapFromUri(System.String)">
+            <summary>Attempts to download a bitmap from a given URI, then loads the bitmap into
+            a <code>Bitmap</code> object and returns.
+            
+            Obviously there are numerous failure cases for a function like this.  For ease 
+            of use, all errors will be reported in a catch-all <code>BitmapManipException</code>,
+            which provides a textual error message based on the exception that occurs.  As usual,
+            the underlying exception is available in <code>InnerException</code> property.
+            
+            Times out after 10 seconds waiting for a response from the server.</summary>
+            
+            <param name="uri">String containing URI from which to retrieve image</param>
+            
+            <returns>Bitmap object from URI.  Shouldn't ever be null, as any error will be reported
+                in an exception.</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.GetBitmapFromUri(System.Uri)">
+            <summary>Attempts to download a bitmap from a given URI, then loads the bitmap into
+            a <code>Bitmap</code> object and returns.
+            
+            Obviously there are numerous failure cases for a function like this.  For ease
+            of use, all errors will be reported in a catch-all <code>BitmapManipException</code>,
+            which provides a textual error message based on the exception that occurs.  As usual,
+            the underlying exception is available in <code>InnerException</code> property.
+            
+            Times out after 10 seconds waiting for a response from the server.</summary>
+            
+            <param name="uri"><code>Uri</code> object specifying the URI from which to retrieve image</param>
+            
+            <returns>Bitmap object from URI.  Shouldn't ever be null, as any error will be reported
+                in an exception.</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.GetBitmapFromUri(System.String,System.Int32)">
+            <summary>Attempts to download a bitmap from a given URI, then loads the bitmap into
+            a <code>Bitmap</code> object and returns.
+            
+            Obviously there are numerous failure cases for a function like this.  For ease 
+            of use, all errors will be reported in a catch-all <code>BitmapManipException</code>,
+            which provides a textual error message based on the exception that occurs.  As usual,
+            the underlying exception is available in <code>InnerException</code> property.
+            </summary>
+            
+            <param name="uri">String containing URI from which to retrieve image</param>
+            <param name="timeoutMs">Timeout (in milliseconds) to wait for response</param>
+            
+            <returns>Bitmap object from URI.  Shouldn't ever be null, as any error will be reported
+                in an exception.</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.GetBitmapFromUri(System.Uri,System.Int32)">
+            <summary>Attempts to download a bitmap from a given URI, then loads the bitmap into
+            a <code>Bitmap</code> object and returns.
+            
+            Obviously there are numerous failure cases for a function like this.  For ease
+            of use, all errors will be reported in a catch-all <code>BitmapManipException</code>,
+            which provides a textual error message based on the exception that occurs.  As usual,
+            the underlying exception is available in <code>InnerException</code> property.
+            </summary>
+            
+            <param name="uri"><code>Uri</code> object specifying the URI from which to retrieve image</param>
+            <param name="timeoutMs">Timeout (in milliseconds) to wait for response</param>
+            
+            <returns>Bitmap object from URI.  Shouldn't ever be null, as any error will be reported
+                in an exception.</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.ConvertBitmapToJpeg(System.Drawing.Bitmap,System.Int32)">
+            <summary>Converts a bitmap to a JPEG with a specific quality level</summary>
+            
+            <param name="inputBmp">Bitmap to convert</param>
+            <param name="quality">Specifies a quality from 0 (lowest) to 100 (highest), or -1 to leave
+            unspecified</param>
+            
+            <returns>A new bitmap object containing the input bitmap converted.
+                If the destination format and the target format are the same, returns
+                a clone of the destination bitmap.</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.ConvertBitmapToTiff(System.Drawing.Bitmap,Universal_ClassLibrary.Picture.BitmapManipulator.TiffCompressionEnum)">
+            <summary>Converts a bitmap to a Tiff with a specific compression</summary>
+            
+            <param name="inputBmp">Bitmap to convert</param>
+            <param name="compression">The compression to use on the TIFF file output.  Be warned that the CCITT3, CCITT4,
+                and RLE compression options are only applicable to TIFFs using a palette index color depth 
+                (that is, 1, 4, or 8 bpp).  Using any of these compression schemes with 24 or 32-bit 
+                TIFFs will throw an exception from the bowels of GDI+</param>
+            
+            <returns>A new bitmap object containing the input bitmap converted.
+                If the destination format and the target format are the same, returns
+                a clone of the destination bitmap.</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.ConvertBitmap(System.Drawing.Bitmap,System.String)">
+            <summary>Converts a bitmap to another bitmap format, returning the new converted
+                bitmap
+            </summary>
+            
+            <param name="inputBmp">Bitmap to convert</param>
+            <param name="destMimeType">MIME type of format to convert to</param>
+            
+            <returns>A new bitmap object containing the input bitmap converted.
+                If the destination format and the target format are the same, returns
+                a clone of the destination bitmap.</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.ConvertBitmap(System.Drawing.Bitmap,System.Drawing.Imaging.ImageFormat)">
+            <summary>Converts a bitmap to another bitmap format, returning the new converted
+                bitmap
+            </summary>
+            
+            <param name="inputBmp">Bitmap to convert</param>
+            <param name="destFormat">Bitmap format to convert to</param>
+            
+            <returns>A new bitmap object containing the input bitmap converted.
+                If the destination format and the target format are the same, returns
+                a clone of the destination bitmap.</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.ScaleBitmap(System.Drawing.Bitmap,System.Double)">
+            <summary>
+            Scales a bitmap by a scale factor, growing or shrinking both axes while
+            maintaining the original aspect ratio
+            </summary>
+            <param name="inputBmp">Bitmap to scale</param>
+            <param name="scaleFactor">Factor by which to scale</param>
+            <returns>New bitmap containing image from inputBmp, scaled by the scale factor</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.ScaleBitmap(System.Drawing.Bitmap,System.Double,System.Double)">
+            <summary>
+            Scales a bitmap by a scale factor, growing or shrinking both axes independently, 
+            possibly changing the aspect ration
+            </summary>
+            <param name="inputBmp">Bitmap to scale</param>
+            <param name="xScaleFactor">Factor by which to scale</param>
+            <param name="yScaleFactor"></param>
+            <returns>New bitmap containing image from inputBmp, scaled by the scale factor</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.ResizeBitmap(System.Drawing.Bitmap,System.Int32,System.Int32)">
+            <summary>
+            Resizes a bitmap's width and height independently
+            </summary>
+            <param name="inputBmp">Bitmap to resize</param>
+            <param name="imgWidth">New width</param>
+            <param name="imgHeight">New height</param>
+            <returns>Resized bitmap</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.ThumbnailBitmap(System.Drawing.Bitmap,System.Int32,System.Int32)">
+            <summary>
+            Generates a thumbnail of the bitmap.  This is effectively a specialized
+            resize function, which maintains the aspect ratio of the image while
+            resizing it to ensure that both its width and height are within
+            caller-specified maximums
+            </summary>
+            <param name="inputBmp">Bitmap for which to generate thumbnail</param>
+            <param name="maxWidth">Maximum width of thumbnail</param>
+            <param name="maxHeight">Maximum height of thumbnail</param>
+            <returns>Thumbnail of inputBmp w/ the same aspect ratio, but
+            width and height both less than or equal to the maximum limits</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.RotateBitmapRight90(System.Drawing.Bitmap)">
+            <summary>
+            
+            </summary>
+            <param name="inputBmp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.RotateBitmapRight180(System.Drawing.Bitmap)">
+            <summary>
+            
+            </summary>
+            <param name="inputBmp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.RotateBitmapRight270(System.Drawing.Bitmap)">
+            <summary>
+            
+            </summary>
+            <param name="inputBmp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.ReverseBitmap(System.Drawing.Bitmap)">
+            <summary>
+            Reverses a bitmap, effectively rotating it 180 degrees in 3D space about
+            the Y axis.  Results in a "mirror image" of the bitmap, reversed much
+            as it would be in a mirror
+            </summary>
+            <param name="inputBmp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.FlipBitmap(System.Drawing.Bitmap)">
+            <summary>
+            Reverses a bitmap, effectively rotating it 180 degrees in 3D space about
+            the X axis.  Results in an upside-down view of the image
+            </summary>
+            <param name="inputBmp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.OverlayBitmap(System.Drawing.Bitmap,System.Drawing.Bitmap,System.Int32,System.Drawing.Point)">
+            <summary>
+            Renders a bitmap over another bitmap, with a specific alpha value.
+            This can be used to overlay a logo or watermark over a bitmap
+            </summary>
+            <param name="destBmp">Bitmap over which image is to be overlaid</param>
+            <param name="bmpToOverlay">Bitmap to overlay</param>
+            <param name="overlayAlpha">Alpha value fo overlay bitmap.  0 = fully transparent, 100 = fully opaque</param>
+            <param name="overlayPoint">Location in destination bitmap where overlay image will be placed</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.OverlayBitmap(System.Drawing.Bitmap,System.Drawing.Bitmap,System.Int32,Universal_ClassLibrary.Picture.BitmapManipulator.ImageCornerEnum)">
+            <summary>
+            Renders a bitmap over another bitmap, with a specific alpha value.
+            This can be used to overlay a logo or watermark over a bitmap
+            </summary>
+            <param name="destBmp">Bitmap over which image is to be overlaid</param>
+            <param name="bmpToOverlay">Bitmap to overlay</param>
+            <param name="overlayAlpha">Alpha value fo overlay bitmap.  0 = fully transparent, 100 = fully opaque</param>
+            <param name="corner">Corner of destination bitmap to place overlay bitmap</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.OverlayBitmap(System.Drawing.Bitmap,System.Drawing.Bitmap,System.Drawing.Point)">
+            <summary>
+            
+            </summary>
+            <param name="destBmp"></param>
+            <param name="bmpToOverlay"></param>
+            <param name="overlayPoint"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.OverlayBitmap(System.Drawing.Bitmap,System.Drawing.Bitmap,Universal_ClassLibrary.Picture.BitmapManipulator.ImageCornerEnum)">
+            <summary>
+            
+            </summary>
+            <param name="destBmp"></param>
+            <param name="bmpToOverlay"></param>
+            <param name="corner"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.CropBitmap(System.Drawing.Bitmap,System.Drawing.Rectangle)">
+            <summary>
+            Crops an image, resulting in a new image consisting of the portion of the
+            original image contained in a provided bounding rectangle
+            </summary>
+            <param name="inputBmp">Bitmap to crop</param>
+            <param name="cropRectangle">Rectangle specifying the range of pixels
+            within the image which is to be retained</param>
+            <returns>New bitmap consisting of the contents of the crop rectangle</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.MimeTypeFromImageFormat(System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.ImageFormatFromMimeType(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="mimeType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.Picture.BitmapManipulator.BitmapManipException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.BitmapManipulator.BitmapManipException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="T:Universal_ClassLibrary.Picture.BitmapManipulator.ImageCornerEnum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.Picture.BitmapManipulator.ImageCornerEnum.TopLeft">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.Picture.BitmapManipulator.ImageCornerEnum.TopRight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.Picture.BitmapManipulator.ImageCornerEnum.BottomRight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.Picture.BitmapManipulator.ImageCornerEnum.BottomLeft">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.Picture.BitmapManipulator.ImageCornerEnum.Center">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.Picture.BitmapManipulator.TiffCompressionEnum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.Picture.BitmapManipulator.TiffCompressionEnum.CCITT3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.Picture.BitmapManipulator.TiffCompressionEnum.CCITT4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.Picture.BitmapManipulator.TiffCompressionEnum.LZW">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.Picture.BitmapManipulator.TiffCompressionEnum.RLE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.Picture.BitmapManipulator.TiffCompressionEnum.None">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.Picture.BitmapManipulator.TiffCompressionEnum.Unspecified">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.Picture.Image">
+            <summary>
+            图片操作
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.Image.Load(System.String)">
+            <summary>
+            加载图片
+            </summary>
+            <param name="FileUrl">图片地址</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.Image.Rotate90">
+            <summary>
+            图片旋转90度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.Image.Rotate180">
+            <summary>
+            图片旋转180度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.Image.Rotate270">
+            <summary>
+            图片旋转270度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.Image.Reverse">
+            <summary>
+            图片反转
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.Image.Thumbnail(System.Int32,System.Int32)">
+            <summary>
+            图片尺寸修改
+            </summary>
+            <param name="TmpWidth"></param>
+            <param name="TmpHeight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.Image.Compress(System.Int32)">
+            <summary>
+            质量压缩
+            </summary>
+            <param name="TmpQuality">默认80</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.Image.FormatConversion(System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            格式转换
+            </summary>
+            <param name="TmpImageFormat">格式类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.Image.SaveBitmap(System.String)">
+            <summary>
+            保存图片
+            </summary>
+            <param name="TmpUrl">保存地址</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.Image.LoadBitmap(System.String)">
+            <summary>
+            核心图片加载方法
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.Image.Binaryzation(System.Int32)">
+            <summary>
+            图像二值化
+            </summary>
+            <param name="TmpQuality">质量调节  默认180</param>
+            <returns>返回图片源Bitmap</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.Image.Gradation">
+            <summary>
+            图像灰度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.Image.Relief">
+            <summary>
+            图像浮雕
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Picture.Image.Inverse">
+            <summary>
+            图像反色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.PlayAudio.PlayMp3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.PlayAudio.PlayMp3.mc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.PlayAudio.PlayMp3.play">
+            <summary>
+            播放
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.PlayAudio.PlayMp3.StopT">
+            <summary>
+            停止
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.PlayAudio.PlayMp3.Puase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Universal_ClassLibrary.PlayAudio.PlayMp3.FileName">
+            <summary>
+            取得播放文件属性
+            </summary>
+        </member>
+        <member name="P:Universal_ClassLibrary.PlayAudio.PlayMp3.Duration">
+            <summary>
+            总时间
+            </summary>
+        </member>
+        <member name="P:Universal_ClassLibrary.PlayAudio.PlayMp3.CurrentPosition">
+            <summary>
+            当前时间
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.PlayAudio.PlayMp3.State">
+            <summary>
+            定义播放状态枚举变量
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.PlayAudio.PlayMp3.State.mPlaying">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.PlayAudio.PlayMp3.State.mPuase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.PlayAudio.PlayMp3.State.mStop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.PlayAudio.PlayMp3.structMCI">
+            <summary>
+            结构变量
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.PlayAudio.PlayMp3.structMCI.bMut">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.PlayAudio.PlayMp3.structMCI.iDur">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.PlayAudio.PlayMp3.structMCI.iPos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.PlayAudio.PlayMp3.structMCI.iVol">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.PlayAudio.PlayMp3.structMCI.iBal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.PlayAudio.PlayMp3.structMCI.iName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.PlayAudio.PlayMp3.structMCI.state">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.SystemOperation.STRINGBUFFER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.STRINGBUFFER.szText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.SystemOperation.SystemHandle">
+            <summary>
+            系统操作类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.BlockKeyAndMouse(System.Boolean)">
+            <summary>
+            锁定键盘和鼠标
+            </summary>
+            <param name="b">true  false</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.SeSystemtimePrivilege(System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16)">
+            <summary>
+            修改系统时间
+            </summary>
+            <param name="wDay">日</param>
+            <param name="wMonth">月</param>
+            <param name="wYear">年</param>
+            <param name="wHour">时</param>
+            <param name="wMinute"></param>
+            <param name="wSecond"></param>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.AddUser(System.String,System.String,System.String,System.String)">
+            <summary>
+            添加windows用户
+            </summary>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+            <param name="group">所属组</param>
+            <param name="description">描述</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.UpdateUserPassword(System.String,System.String)">
+            <summary>
+            更改windows用户密码
+            </summary>
+            <param name="username">用户名</param>
+            <param name="newpassword">新密码</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.RemoveUser(System.String)">
+            <summary>
+            删除windows用户
+            </summary>
+            <param name="username">用户名</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.AddGroup(System.String,System.String)">
+            <summary>
+            添加windows用户组
+            </summary>
+            <param name="groupName">组名称</param>
+            <param name="description">描述</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.RemoveGroup(System.String)">
+            <summary>
+            删除windows用户组
+            </summary>
+            <param name="groupName">组名称</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.SelectSystemUser(System.String)">
+            <summary>
+            检测系统用户是否存在
+            </summary>
+            <param name="user">用户名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.AlterSystemTimeFormat(System.String)">
+            <summary>
+            修改系统时间格式   区分大小写请根据提示编写样式
+            </summary>
+            <param name="Format">三种样式:yyyy-MM-dd、yy/m/d、tt hh: mm: ss</param>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.LogoutSystem">
+            <summary>
+            注销系统
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.EmptyAllRecycle">
+            <summary>
+            清空回收站所有文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.AcquireAllCourse">
+            <summary>
+            获取系统进程
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.CourseId(System.String)">
+            <summary>
+            获取程序进程ID
+            </summary>
+            <param name="ProcessName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.RunThreadCount(System.String)">
+            <summary>
+            获取程序启动线程数
+            </summary>
+            <param name="ProcessName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.CpuTieupTime(System.String)">
+            <summary>
+            获取程序占用CPU时间
+            </summary>
+            <param name="ProcessName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.ThreadPRI(System.String)">
+            <summary>
+            获取程序线程优先级
+            </summary>
+            <param name="ProcessName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.RunTime(System.String)">
+            <summary>
+            获取程序启动时间
+            </summary>
+            <param name="ProcessName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.ProcedureDedicatedEMS(System.String)">
+            <summary>
+            获取程序专用内存
+            </summary>
+            <param name="ProcessName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.ProcedurePeakVirtualBytesEMS(System.String)">
+            <summary>
+            获取程序峰值虚拟内存
+            </summary>
+            <param name="ProcessName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.ProcedurePeakVirtualPaginationEMS(System.String)">
+            <summary>
+            获取程序峰值分页内存
+            </summary>
+            <param name="ProcessName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.ProcedurePaginationSystemEMS(System.String)">
+            <summary>
+            获取程序分页系统内存
+            </summary>
+            <param name="ProcessName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.ProcedurePaginationEMS(System.String)">
+            <summary>
+            获取程序分页内存
+            </summary>
+            <param name="ProcessName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.ProcedureNotPaginationSystemEMS(System.String)">
+            <summary>
+            获取程序未分页系统内存
+            </summary>
+            <param name="ProcessName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.ProcedurePhysicsEMS(System.String)">
+            <summary>
+            获取程序物理内存
+            </summary>
+            <param name="ProcessName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.ProcedureDummyEMS(System.String)">
+            <summary>
+            获取程序虚拟内存
+            </summary>
+            <param name="ProcessName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.SystemServer">
+            <summary>
+            获取系统服务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.AllInputMethod">
+            <summary>
+            获取所有输入法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.GetAcquiescenceInputMethod">
+            <summary>
+            获取系统默认输入法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.GetNonceInputMethod">
+            <summary>
+            获取系统当前输入法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.SetupInputMethod(System.Int32)">
+            <summary>
+            设置输入法
+            </summary>
+            <param name="InputMethodIndex"></param>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.CloseDisplay">
+            <summary>
+            关闭显示器
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.CloseSystem">
+            <summary>
+            关闭系统
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.GetVolOf(System.String)">
+            <summary>
+            获取盘符的序列号
+            </summary>
+            <param name="drvID">盘符</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.GetConfigiuageConnString">
+            <summary>
+            调用系统的数据库连接程序
+            </summary>
+            <returns>返回数据库连接串</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.EndProcess(System.String)">
+            <summary>
+            结束进程
+            </summary>
+            <param name="ProcessName"></param>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.StartCmd(System.String)">
+            <summary>
+            执行命令行程序
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.SystemOperation.SystemHandle.StartCmd(System.String,System.String)">
+            <summary>
+            执行命令行程序
+            </summary>
+            <param name="command"></param>
+            <param name="argument"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.SystemOperation.SystemTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.SystemTime.wYear">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.SystemTime.wMonth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.SystemTime.wDayOfWeek">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.SystemTime.wDay">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.SystemTime.wHour">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.SystemTime.wMinute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.SystemTime.wSecond">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.SystemTime.wMilliseconds">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.SystemOperation.TokPriv1Luid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.TokPriv1Luid.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.TokPriv1Luid.Luid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.TokPriv1Luid.Attr">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.SystemOperation.USER_INFO_0">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Universal_ClassLibrary.SystemOperation.USER_INFO_0.Username">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.RandomProduce">
+            <summary>
+            随即数产生类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.RandomProduce.GetRandomDoNotRepeat(System.Int32)">
+            <summary>
+            产生不重复随即数字  0-最大数
+            </summary>
+            <param name="Max">最大数</param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.Reflect.ReflectForm">
+            <summary>
+            反射功能类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Reflect.ReflectForm.FormReflex(System.String)">
+            <summary>
+            反射窗体
+            </summary>
+            <param name="formname">命名空间地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Reflect.ReflectForm.SetValueControlProperty(System.Object,System.String,System.String,System.Object)">
+            <summary>
+            根据控件名和属性名赋值
+            </summary>
+            <param name="ClassInstance">控件所在实例</param>
+            <param name="ControlName">控件名</param>
+            <param name="PropertyName">属性名</param>
+            <param name="Value">属性值</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Reflect.ReflectForm.GetValueControlProperty(System.Object,System.String,System.String)">
+            <summary>
+            根据控件名和属性名取值
+            </summary>
+            <param name="ClassInstance">控件所在实例</param>
+            <param name="ControlName">控件名</param>
+            <param name="PropertyName">属性名</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.StringHanDle">
+            <summary>
+            字符串操作类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.StringHanDle.GetDecimalPoint(System.String)">
+            <summary>
+            获取有几个小数点
+            </summary>
+            <param name="str">数值</param>
+            <returns>返回小数点个数</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.StringHanDle.Left(System.String,System.Int32)">
+            <summary>
+            从左边开始截取
+            </summary>
+            <param name="str">数值</param>
+            <param name="length">长度</param>
+            <returns>返回截取后的字符串</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.StringHanDle.Right(System.String,System.Int32)">
+            <summary>
+            从右边开始截取
+            </summary>
+            <param name="str">数值</param>
+            <param name="length">长度</param>
+            <returns>返回截取后的字符串</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.StringHanDle.InStrRev(System.String,System.String)">
+            <summary>
+            从右边开始搜索字符返回索引
+            </summary>
+            <param name="str">数值</param>
+            <param name="StringMatch">要搜索的字符</param>
+            <returns>返回截取后的字符串</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.StringHanDle.InStr(System.String,System.String)">
+            <summary>
+            从左边开始搜索字符返回索引
+            </summary>
+            <param name="str">数值</param>
+            <param name="StringMatch">要搜索的字符</param>
+            <returns>返回截取后的字符串</returns>
+        </member>
+        <!-- 对于成员“M:Universal_ClassLibrary.StringHanDle.SplitToListString(System.String,System.Char)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Universal_ClassLibrary.StringHanDle.SplitToListString(System.String,System.Char,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Universal_ClassLibrary.StringHanDle.GetFileName(System.String)">
+            <summary>
+            获取文件名字
+            </summary>
+            <param name="Url">地址</param>
+            <returns>返回文件名字</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.StringHanDle.GetFileExpand(System.String)">
+            <summary>
+            获取文件扩展名
+            </summary>
+            <param name="Url"></param>
+            <returns>扩展名 ".aspx"</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.StringHanDle.GetFileNameExpand(System.String)">
+            <summary>
+            获取名字名字+扩展名
+            </summary>
+            <param name="Url"></param>
+            <returns>文件.exe</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.StringHanDle.StringReverse(System.String)">
+            <summary>
+            字符串反转
+            </summary>
+            <param name="str">被反转的字符串</param>
+            <returns>反转后的字符串</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.StringHanDle.Sub(System.String,System.Int32)">
+            <summary>
+            截取字符串实际长度
+            </summary>
+            <param name="str">原字符串</param>
+            <param name="length">长度（原子字符串中全是汉字时的个数）</param>
+            <returns>返回截取后的字符串</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.StringHanDle.GetLength(System.String)">
+            <summary>
+            获取字符串长度。与string.Length不同的是，该方法将中文作 2 个字符计算。
+            </summary>
+            <param name="str">目标字符串</param>
+            <returns>返回字符数</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.ThreadPond">
+            <summary>
+            线程类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.ThreadPond.StartThread">
+            <summary>
+            线程启动
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.ThreadPond.StopThread">
+            <summary>
+            停止线程
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.ThreadPond.ThreadedCore">
+            <summary>
+            线程执行池
+            </summary>
+        </member>
+        <member name="E:Universal_ClassLibrary.ThreadPond.ThreadPondEvent">
+            <summary>
+            事件声明
+            </summary>
+        </member>
+        <member name="P:Universal_ClassLibrary.ThreadPond.IsBackground">
+            <summary>
+            线程是否后台运行
+            </summary>
+        </member>
+        <member name="T:Universal_ClassLibrary.Validate">
+            <summary>
+            验证类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.IsNumber(System.String)">
+            <summary>
+            验证整数，小数，负数
+            </summary>
+            <param name="str">要验证的数据</param>
+            <returns>返回True Flase</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.IsEmail(System.String)">
+            <summary>
+            验证Email
+            </summary>
+            <param name="str">要验证的数据</param>
+            <returns>返回True Flase</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.IsNegativeNumbers(System.String)">
+            <summary>
+            验证负数
+            </summary>
+            <param name="str">要验证的数据</param>
+            <returns>返回True Flase</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.IsTel(System.String)">
+            <summary>
+            验证手机号码
+            </summary>
+            <param name="str">要验证的数据</param>
+            <returns>返回True Flase</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.IsPhone(System.String)">
+            <summary>
+            验证座机号码格式为："XXXX-XXXXXXX"、"XXX-XXXXXXXX"
+            </summary>
+            <param name="str">要验证的数据</param>
+            <returns>返回True Flase</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.IsCard(System.String)">
+            <summary>
+            验证身份证号，必须为15或者18位
+            </summary>
+            <param name="str">要验证的数据</param>
+            <returns>返回True Flase</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.Ispostcode(System.String)">
+            <summary>
+            验证邮政编码，6位数字
+            </summary>
+            <param name="str">要验证的数据</param>
+            <returns>返回True Flase</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.IsPage(System.String)">
+            <summary>
+            验证网址
+            </summary>
+            <param name="str">要验证的数据</param>
+            <returns>返回True Flase</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.IsQQ(System.String)">
+            <summary>
+            验证QQ号 
+            </summary>
+            <param name="str">要验证的数据</param>
+            <returns>返回True Flase</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.IsDate(System.String)">
+            <summary>
+            验证时间格式hh：mm
+            </summary>
+            <param name="str">要验证的数据</param>
+            <returns>返回True Flase</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.IsChinese(System.String)">
+            <summary>
+            验证汉字
+            </summary>
+            <param name="str">要验证的数据</param>
+            <returns>返回True Flase</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.IsInt(System.String)">
+            <summary>
+            验证整数
+            </summary>
+            <param name="str">要验证的数据</param>
+            <returns>返回True Flase</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.IsDouble(System.String)">
+            <summary>
+            验证浮点数
+            </summary>
+            <param name="str">要验证的数据</param>
+            <returns>返回True Flase</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.FormatVerify(System.String)">
+            <summary>
+            区间模版格式
+            </summary>
+            <param name="str">区间模版格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.first_format(System.String)">
+            <summary>
+            首码格式验证
+            </summary>
+            <param name="str">要验证的数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.BitVerify(System.String,System.Int32)">
+            <summary>
+            区间模版格式的位验证
+            </summary>
+            <param name="Format">区间模版格式</param>
+            <param name="Bit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.IsWholeString(System.String)">
+            <summary>
+            字母验证
+            </summary>
+            <param name="str">被验证信息</param>
+            <returns>返回True Flase</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Validate.IsFileInUse(System.String)">
+            <summary>
+            验证文件是否被占用
+            </summary>
+            <param name="fileName">文件路径</param>
+            <returns>0文件不存在     1文件被占用    2文件没有被占用</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.VerificationCode">
+            <summary>
+            验证码静态类
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.VerificationCode.MakeCode(System.Int32)">
+            <summary>
+            生成验证码字符串
+            </summary>
+            <param name="codeLen">验证码字符长度</param>
+            <returns>返回验证码字符串</returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.VerificationCode.CreateCodeImg(System.String)">
+            <summary>
+            生成验证码图片流
+            </summary>
+            <param name="checkCode">验证码字符串</param>
+            <returns>返回验证码图片流</returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.Web.WcfDynamicCall">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Web.WcfDynamicCall.CreateWCFServiceByURL``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Web.WcfDynamicCall.CreateWCFServiceByURL``1(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="url"></param>
+            <param name="bing"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Web.WcfDynamicCall.CreateBinding(System.String)">
+            <summary>
+            创建传输协议
+            </summary>
+            <param name="binding">传输协议名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal_ClassLibrary.Web.WebServerDynamicCall">
+            <summary>
+            动态调用WebServer
+            </summary>
+        </member>
+        <member name="M:Universal_ClassLibrary.Web.WebServerDynamicCall.Load(System.String)">
+            <summary>
+            加载WEBSERVER资源
+            </summary>
+            <param name="WebServerUrl">地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Web.WebServerDynamicCall.TmpInvoke(System.String,System.String,System.Object[])">
+            <summary>
+            方法调用
+            </summary>
+            <param name="TmpNamespace">命名空间</param>
+            <param name="TmpFunctionName">方法名字</param>
+            <param name="TmpParameterOb">参数对象数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal_ClassLibrary.Web.WebServerDynamicCall.Uninstall">
+            <summary>
+            卸载资源
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

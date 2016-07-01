@@ -1,0 +1,49 @@
+﻿/**分页 begin**/
+.pagination {
+    border-left: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+    background-image: url('../../Themes/Images/datagrid_header_bg.gif');
+    background-repeat: repeat-x;
+    height: 27px;
+    width: auto;
+}
+
+.pagination-btn-separator {
+    float: left;
+    height: 24px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #fff;
+    margin: 1px;
+}
+
+.first {
+    background: url('../../Themes/Images/first.gif') no-repeat 0px 2px;
+    cursor: pointer;
+}
+
+.prev {
+    background: url('../../Themes/Images/prev.gif') no-repeat 0px 2px;
+    cursor: pointer;
+}
+
+.next {
+    background: url('../../Themes/Images/next.gif') no-repeat 0px 2px;
+    cursor: pointer;
+}
+
+.last {
+    background: url('../../Themes/Images/last.gif') no-repeat 0px 2px;
+    cursor: pointer;
+}
+/* 底部 */
+.mini_nav {
+    position: fixed;
+    _position: absolute;
+    _top: expression(offsetParent.scrollTop + offsetParent.clientHeight-offsetHeight);
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+}
+/**分页 end**/
