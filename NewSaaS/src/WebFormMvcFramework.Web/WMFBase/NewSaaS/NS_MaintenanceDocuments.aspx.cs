@@ -11,18 +11,25 @@ using WebFormMvcFramework.Busines;
 using WebFormMvcFramework.Common.DotNetUI;
 
 namespace WebFormMvcFramework.Web.WMFBase.NewSaaS
-{
+{ 
     public partial class NS_MaintenanceDocuments : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
-                DataTable SaaS_CustomerType = DataFactory.SqlDataBase().ReturnDataTable("select * from SaaS_CustomerType").Copy();
-                c_CustomerType.DataValueField = "c_guid";
-                c_CustomerType.DataTextField = "c_name";
-                c_CustomerType.DataSource = SaaS_CustomerType.Copy();
-                c_CustomerType.DataBind();
+                DataTable SaaS_CustomerType = DataFactory.SqlDataBase().ReturnDataTable("select * from SaaS_User").Copy();
+                m_ReceptionStaff.DataValueField = "u_guid";
+                m_ReceptionStaff.DataTextField = "u_user";
+                m_ReceptionStaff.DataSource = SaaS_CustomerType.Copy();
+                m_ReceptionStaff.DataBind();
+                
+                DataTable SaaS_businessType = DataFactory.SqlDataBase().ReturnDataTable("select * from SaaS_businessType").Copy();
+                m_ServerType.DataValueField = "b_guid";
+                m_ServerType.DataTextField = "b_name";
+                m_ServerType.DataSource = SaaS_businessType.Copy();
+                m_ServerType.DataBind();
+                 
             }
         }
 
@@ -79,6 +86,16 @@ namespace WebFormMvcFramework.Web.WMFBase.NewSaaS
             SqlWhere.Append("        ,'" + c_number.Value + "')  ");
              * */
             ShowMsgHelper.AlertMsg("添加成功！");
+        }
+
+        public void Select(object sender, EventArgs e){
+            DataTable SaasCustomer = DataFactory.SqlDataBase().ReturnDataTable("").Copy();
+            m_LatestMileage.Value = SaasCustomer.Rows[0]["m_LatestMileage"].ToString();
+            //m_HistoryConsume.Value=
+            c_Models.Value = SaasCustomer.Rows[0]["c_Models"].ToString();
+            //c_HistoryNumbers.Value=
+            c_BodyColor.Value = SaasCustomer.Rows[0]["c_BodyColor"].ToString();
+            //c_HistoryNotPay.Value=
         }
     }
 }

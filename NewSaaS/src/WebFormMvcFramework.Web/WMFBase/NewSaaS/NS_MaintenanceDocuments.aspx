@@ -92,82 +92,63 @@
         </div>
         
         <asp:LinkButton ID="Create_Customer" runat="server" class="button green" OnClientClick="add()">添加客户</asp:LinkButton>
-        <asp:LinkButton ID="Select_Customer" runat="server" class="button green" OnClientClick="select()">选择客户</asp:LinkButton>
+        <asp:LinkButton ID="Select_Customer" runat="server" class="button green" OnClientClick="select()" OnClick="Select">选择客户</asp:LinkButton>
         <div class="auto-style2">
             <table id="table1" border="0" cellpadding="0" cellspacing="0" class="auto-style1">
                 <tr>
                     <th class="auto-style7">最新里程： </th>
                     <td class="auto-style3">
-                        <input id="m_LatestMileage" runat="server" type="text" class="txt" datacol="yes" err="最新里程"
+                        <input id="c_NextMaintenance" runat="server" type="text" class="txt" datacol="yes" err="最新里程"
                             checkexpession="NotNull" style="width: 200px" /></td>
-                    <th class="auto-style7">上次里程：
-                    </th>
+                    <th class="auto-style7">上次里程：</th>
                     <td class="auto-style4">
-                        <input id="w_CommodityName" runat="server" type="text" class="txt" datacol="yes" err="上次里程"
-                            checkexpession="NotNull" style="width: 200px" /></td>
+                        <input id="m_LatestMileage" runat="server" type="text" class="txt" datacol="yes" err="上次里程"
+                            checkexpession="NotNull" style="width: 200px" readonly="readonly"/></td>
                     <td class="auto-style2">历史消费：</td>
                     <td class="auto-style8">
-                        <input id="w_CommodityName0" runat="server" type="text" class="txt" datacol="yes" err="历史消费"
-                            checkexpession="NotNull" style="width: 200px" /></td>
+                        <input id="m_HistoryConsume" runat="server" type="text" class="txt" datacol="yes" err="历史消费"
+                            checkexpession="NotNull" style="width: 200px" readonly="readonly"/></td>
                 </tr>
                 <tr>
                     <th class="auto-style7">接待人员：</th>
-                    <td>
-                        <asp:DropDownList ID="c_CustomerType" runat="server" class="txt" Style="width: 205px; height: 25px"></asp:DropDownList>
+                    <td class="auto-style3">
+                        <asp:DropDownList ID="m_ReceptionStaff" runat="server" class="txt" Style="width: 205px; height: 25px"></asp:DropDownList>
 
                     </td>
                     <th class="auto-style7">车型：</th>
                     <td class="auto-style4">
-                        <input id="w_InitialCostPrice" runat="server" type="text" class="txt" datacol="yes" err="车型"
-                            checkexpession="NotNull" style="width: 200px" /></td>
+                        <input id="c_Models" runat="server" type="text" class="txt" datacol="yes" err="车型"
+                            checkexpession="NotNull" style="width: 200px" readonly="readonly"/></td>
                     <td class="auto-style2">历史单数：</td>
                     <td class="auto-style8">
-                        <input id="w_CommodityName1" runat="server" type="text" class="txt" datacol="yes" err="历史单数"
-                            checkexpession="NotNull" style="width: 200px" /></td>
+                        <input id="c_HistoryNumbers" runat="server" type="text" class="txt" datacol="yes" err="历史单数"
+                            checkexpession="NotNull" style="width: 200px" readonly="readonly"/></td>
                 </tr>
                 <tr>
                     <th class="auto-style7">业务类型：</th>
                     <td class="auto-style3">
-                        <input type="text" id="m_ServiceType" datacol="yes" class="txt" runat="server" style="width: 200px;" /></td>
+                        <asp:DropDownList ID="m_ServerType" runat="server" class="txt" Style="width: 205px; height: 25px"></asp:DropDownList></td>
                     <th class="auto-style7">车身颜色：</th>
                     <td class="auto-style4">
-                        <input id="w_brand" runat="server" type="text" class="txt" datacol="yes" err="车身颜色"
-                            checkexpession="NotNull" style="width: 200px" /></td>
-                    <td class="auto-style2">历史欠数：</td>
+                        <input id="c_BodyColor" runat="server" type="text" class="txt" datacol="yes" err="车身颜色"
+                            checkexpession="NotNull" style="width: 200px" readonly="readonly"/></td>
+                    <td class="auto-style2">历史欠款：</td>
                     <td class="auto-style8">
-                        <input id="w_CommodityName2" runat="server" type="text" class="txt" datacol="yes" err="历史欠数"
-                            checkexpession="NotNull" style="width: 200px" /></td>
+                        <input id="c_HistoryNotPay" runat="server" type="text" class="txt" datacol="yes" err="历史欠数"
+                            checkexpession="NotNull" style="width: 200px" readonly="readonly"/></td>
                 </tr>
                 <tr>
                     <th class="auto-style7">送修人：</th>
                     <td class="auto-style3">
                         <input id="m_RepairPerson" runat="server" type="text" class="txt" datacol="yes" err="送修人"
                             checkexpession="NotNull" style="width: 200px" /></td>
-                    <th class="auto-style7">故障描述：</th>
-                    <td class="auto-style4">
-                        <input id="m_FaultDescription" runat="server" type="text" class="txt" datacol="yes" err="故障描述"
-                            checkexpession="NotNull" style="width: 200px" /></td>
-                    <td class="auto-style2">维修建议：</td>
-                    <td class="auto-style8">
-                        <input id="m_MaintenanceSuggestion" runat="server" type="text" class="txt" datacol="yes" err="维修建议"
-                            checkexpession="NotNull" style="width: 200px" /></td>
-                </tr>
-                <tr>
-                    <th class="auto-style7">备注：</th>
-                    <td class="auto-style3">
-                        <input id="m_Remarks" runat="server" type="text" class="txt" datacol="yes" err="备注"
-                            checkexpession="NotNull" style="width: 200px" /></td>
-                    <th class="auto-style7">&nbsp;</th>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
                 </tr>
             </table>
         </div>
         <div class="auto-style10">
             <div style="float: right;">
-                &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" class="button green">选 择</asp:LinkButton>
-                <asp:LinkButton ID="LinkButton4" runat="server" class="button green">新 建</asp:LinkButton>
+                &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" class="button green">选择维修项目</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton4" runat="server" class="button green">新建维修项目</asp:LinkButton>
             </div>
             项目明细
         </div>

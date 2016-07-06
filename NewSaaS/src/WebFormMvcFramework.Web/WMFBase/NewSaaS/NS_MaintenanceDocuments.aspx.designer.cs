@@ -76,6 +76,15 @@ namespace WebFormMvcFramework.Web.WMFBase.NewSaaS {
         protected global::System.Web.UI.WebControls.LinkButton Select_Customer;
         
         /// <summary>
+        /// c_NextMaintenance 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText c_NextMaintenance;
+        
+        /// <summary>
         /// m_LatestMileage 控件。
         /// </summary>
         /// <remarks>
@@ -85,76 +94,67 @@ namespace WebFormMvcFramework.Web.WMFBase.NewSaaS {
         protected global::System.Web.UI.HtmlControls.HtmlInputText m_LatestMileage;
         
         /// <summary>
-        /// w_CommodityName 控件。
+        /// m_HistoryConsume 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText w_CommodityName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText m_HistoryConsume;
         
         /// <summary>
-        /// w_CommodityName0 控件。
+        /// m_ReceptionStaff 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText w_CommodityName0;
+        protected global::System.Web.UI.WebControls.DropDownList m_ReceptionStaff;
         
         /// <summary>
-        /// c_CustomerType 控件。
+        /// c_Models 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList c_CustomerType;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText c_Models;
         
         /// <summary>
-        /// w_InitialCostPrice 控件。
+        /// c_HistoryNumbers 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText w_InitialCostPrice;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText c_HistoryNumbers;
         
         /// <summary>
-        /// w_CommodityName1 控件。
+        /// m_ServerType 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText w_CommodityName1;
+        protected global::System.Web.UI.WebControls.DropDownList m_ServerType;
         
         /// <summary>
-        /// m_ServiceType 控件。
+        /// c_BodyColor 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText m_ServiceType;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText c_BodyColor;
         
         /// <summary>
-        /// w_brand 控件。
+        /// c_HistoryNotPay 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText w_brand;
-        
-        /// <summary>
-        /// w_CommodityName2 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText w_CommodityName2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText c_HistoryNotPay;
         
         /// <summary>
         /// m_RepairPerson 控件。
@@ -164,33 +164,6 @@ namespace WebFormMvcFramework.Web.WMFBase.NewSaaS {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText m_RepairPerson;
-        
-        /// <summary>
-        /// m_FaultDescription 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText m_FaultDescription;
-        
-        /// <summary>
-        /// m_MaintenanceSuggestion 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText m_MaintenanceSuggestion;
-        
-        /// <summary>
-        /// m_Remarks 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText m_Remarks;
         
         /// <summary>
         /// LinkButton3 控件。
